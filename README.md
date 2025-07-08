@@ -266,7 +266,7 @@ end;
 procedure TServerForm.ShowAllClients;
 begin
   // Total client count
-  ShowMessage(Format('Total clients: %d', [mORMot2WebSocketServer1.ClientCount]));
+  ShowMessage(Format('Total clients: %d', [mORMot2WebSocketServer1.GetClientCount]));
   
   // Client IP example
   ShowMessage(mORMot2WebSocketServer1.GetClientIP(ClientID));
