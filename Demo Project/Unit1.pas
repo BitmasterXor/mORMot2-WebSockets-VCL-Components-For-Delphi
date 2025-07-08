@@ -736,7 +736,7 @@ end;
 procedure TForm1.UpdateStatistics;
 begin
   // Server stats
-  LabelTotalConnections.Caption := Format('Total Connections: %d',
+  LabelTotalConnections.Caption := Format('Total Connections Made: %d',
     [Server.TotalConnections]);
   LabelBytesReceived.Caption := Format('Bytes Received: %d',
     [Server.TotalBytesReceived]);
