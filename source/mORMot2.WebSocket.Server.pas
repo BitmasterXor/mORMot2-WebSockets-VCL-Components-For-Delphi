@@ -54,7 +54,7 @@ type
   /// Forward declarations
   TmORMot2WebSocketServer = class;
 
-  /// CLEANED UP events - removed redundant OnConnect, OnDisconnect, OnCommandReceived
+  /// FIXED EVENTS - OnDataReceived/OnDataSent are for STATISTICS ONLY!
   TWebSocketClientConnectedEvent = procedure(Sender: TObject; ClientID: Integer)
     of object;
   TWebSocketClientDisconnectedEvent = procedure(Sender: TObject;
@@ -62,11 +62,11 @@ type
   TWebSocketErrorEvent = procedure(Sender: TObject; const ErrorMsg: string)
     of object;
   TWebSocketDataReceivedEvent = procedure(Sender: TObject; ClientID: Integer;
-    const Data: TBytes) of object;
+    const Data: TBytes) of object;  // FOR STATISTICS/LOGGING ONLY!
   TWebSocketDataSentEvent = procedure(Sender: TObject; ClientID: Integer;
-    const Data: TBytes) of object;
+    const Data: TBytes) of object;  // FOR STATISTICS/LOGGING ONLY!
   TWebSocketHandleCommandEvent = procedure(Sender: TObject; ClientID: Integer;
-    const Command: TBytes) of object;
+    const Command: TBytes) of object;  // THIS IS WHERE YOU PROCESS DATA!
 
   /// STATE CHANGE EVENTS
   TWebSocketServerStateChangeEvent = procedure(Sender: TObject;
@@ -190,13 +190,13 @@ type
     fTotalMessagesReceived: Int64;
     fTotalMessagesSent: Int64;
 
-    // CLEANED UP EVENTS - removed OnConnect, OnDisconnect, OnCommandReceived
+    // FIXED EVENTS - OnDataReceived/OnDataSent are for STATISTICS ONLY!
     fOnClientConnected: TWebSocketClientConnectedEvent;
     fOnClientDisconnected: TWebSocketClientDisconnectedEvent;
     fOnError: TWebSocketErrorEvent;
-    fOnDataReceived: TWebSocketDataReceivedEvent;
-    fOnDataSent: TWebSocketDataSentEvent;
-    fOnHandleCommand: TWebSocketHandleCommandEvent;
+    fOnDataReceived: TWebSocketDataReceivedEvent;  // FOR STATISTICS/LOGGING ONLY!
+    fOnDataSent: TWebSocketDataSentEvent;  // FOR STATISTICS/LOGGING ONLY!
+    fOnHandleCommand: TWebSocketHandleCommandEvent;  // THIS IS WHERE YOU PROCESS DATA!
     fOnServerStateChange: TWebSocketServerStateChangeEvent;
 
     // Helper methods
@@ -334,18 +334,18 @@ type
     property TotalMessagesReceived: Int64 read fTotalMessagesReceived;
     property TotalMessagesSent: Int64 read fTotalMessagesSent;
 
-    // CLEANED UP Events - removed redundant OnConnect, OnDisconnect, OnCommandReceived
+    // FIXED EVENTS - OnDataReceived/OnDataSent are for STATISTICS ONLY!
     property OnClientConnected: TWebSocketClientConnectedEvent
       read fOnClientConnected write fOnClientConnected;
     property OnClientDisconnected: TWebSocketClientDisconnectedEvent
       read fOnClientDisconnected write fOnClientDisconnected;
     property OnError: TWebSocketErrorEvent read fOnError write fOnError;
     property OnDataReceived: TWebSocketDataReceivedEvent read fOnDataReceived
-      write fOnDataReceived;
+      write fOnDataReceived;  // FOR STATISTICS/LOGGING ONLY!
     property OnDataSent: TWebSocketDataSentEvent read fOnDataSent
-      write fOnDataSent;
+      write fOnDataSent;  // FOR STATISTICS/LOGGING ONLY!
     property OnHandleCommand: TWebSocketHandleCommandEvent read fOnHandleCommand
-      write fOnHandleCommand;
+      write fOnHandleCommand;  // THIS IS WHERE YOU PROCESS DATA!
     property OnServerStateChange: TWebSocketServerStateChangeEvent
       read fOnServerStateChange write fOnServerStateChange;
   end;
@@ -377,7 +377,8 @@ procedure TCustomWebSocketServerProtocol.ProcessIncomingFrame
   (Sender: TWebSocketProcess; var Request: TWebSocketFrame;
   const Info: RawUtf8);
 var
-  commandBytes: TBytes;
+  rawBytes: TBytes;
+  decryptedBytes: TBytes;
   ClientID: Integer;
   Connection: TWebSocketAsyncConnection;
 begin
@@ -387,9 +388,9 @@ begin
       focText:
         begin
           // Convert payload to TBytes
-          SetLength(commandBytes, Length(Request.payload));
-          if Length(commandBytes) > 0 then
-            Move(Request.payload[1], commandBytes[0], Length(commandBytes));
+          SetLength(rawBytes, Length(Request.payload));
+          if Length(rawBytes) > 0 then
+            Move(Request.payload[1], rawBytes[0], Length(rawBytes));
 
           // FIXED: Get connection info using the proper mORMot2 async approach
           if Sender is TCustomWebSocketAsyncProcess then
@@ -403,17 +404,22 @@ begin
             ClientID := 0;
           end;
 
-          // FIXED: Try to decrypt with proper coordination - MATCHING CLIENT LOGIC!
+          // FIXED: Fire OnDataReceived FIRST for statistics (with raw encrypted data)
+          fOwnerServer.OnInternalDataReceived(ClientID, rawBytes);
+
+          // FIXED: Now decrypt the data for command processing
+          decryptedBytes := rawBytes;
           if fOwnerServer.fEncryptionEnabled and
             (fOwnerServer.fEncryptionKey <> '') then
           begin
             // Get the stored client IP for decryption
-            commandBytes := fOwnerServer.DecryptData(commandBytes,
+            decryptedBytes := fOwnerServer.DecryptData(rawBytes,
               fOwnerServer.fServer.GetStoredClientIP(ClientID));
           end;
 
-          // Fire the internal data received event
-          fOwnerServer.OnInternalDataReceived(ClientID, commandBytes);
+          // FIXED: Fire OnHandleCommand for actual data processing (with decrypted data)
+          if Assigned(fOwnerServer.fOnHandleCommand) then
+            fOwnerServer.fOnHandleCommand(fOwnerServer, ClientID, decryptedBytes);
         end;
     end;
   end;
@@ -741,7 +747,7 @@ begin
   fSendBufferSize := 8192;
   fTag := 0;
   fThreadPoolSize := 4;
-  fVersion := '2.0.6'; // Updated version for connection limit fix
+  fVersion := '2.0.7'; // Updated version for event handling fix
 
   // Statistics
   fTotalActiveConnections := 0;
@@ -1038,7 +1044,10 @@ begin
 
     // FIXED: Use SAME salt derivation as client
     Password := ToUtf8(fEncryptionKey);
-    Salt := ToUtf8(fEncryptionKey + '_client_' + SaltHost + '_' + IntToStr(fPort) + '_salt_2024');
+    if (ClientIP = '127.0.0.1') or (ClientIP = 'localhost') or (ClientIP = '') then
+  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
+else
+  Salt := ToUtf8(fEncryptionKey + '_client_' + ClientIP + '_' + IntToStr(fPort) + '_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
@@ -1189,7 +1198,10 @@ begin
 
     // FIXED: Use SAME salt derivation as client
     Password := ToUtf8(fEncryptionKey);
-    Salt := ToUtf8(fEncryptionKey + '_client_' + SaltHost + '_' + IntToStr(fPort) + '_salt_2024');
+    if (ClientIP = '127.0.0.1') or (ClientIP = 'localhost') or (ClientIP = '') then
+  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
+else
+  Salt := ToUtf8(fEncryptionKey + '_client_' + ClientIP + '_' + IntToStr(fPort) + '_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
@@ -1430,6 +1442,7 @@ begin
     fOnClientDisconnected(Self, ClientID);
 end;
 
+// FIXED: OnDataReceived is for STATISTICS/LOGGING ONLY!
 procedure TmORMot2WebSocketServer.OnInternalDataReceived(ClientID: Integer;
   const Data: TBytes);
 begin
@@ -1437,13 +1450,9 @@ begin
   Inc(fTotalBytesReceived, Length(Data));
   Inc(fTotalMessagesReceived);
 
-  // Fire data received event
+  // Fire OnDataReceived for STATISTICS/LOGGING ONLY!
   if Assigned(fOnDataReceived) then
     fOnDataReceived(Self, ClientID, Data);
-
-  // Fire handle command event (covers the functionality of removed OnCommandReceived)
-  if Assigned(fOnHandleCommand) then
-    fOnHandleCommand(Self, ClientID, Data);
 end;
 
 // FIXED: Public methods - now fully working with mORMot2 async!
@@ -1478,12 +1487,12 @@ begin
     if Result then
     begin
       // Update statistics
-      Inc(fTotalBytesSent, Length(Command));
+      Inc(fTotalBytesSent, Length(dataToSend));
       Inc(fTotalMessagesSent);
 
-      // Fire event
+      // Fire OnDataSent for STATISTICS/LOGGING ONLY!
       if Assigned(fOnDataSent) then
-        fOnDataSent(Self, ClientID, Command);
+        fOnDataSent(Self, ClientID, dataToSend);
     end;
   except
     on E: Exception do
@@ -1519,12 +1528,12 @@ begin
           if fServer.SendToClient(ClientID, dataToSend) then
           begin
             // Update statistics
-            Inc(fTotalBytesSent, Length(Command));
+            Inc(fTotalBytesSent, Length(dataToSend));
             Inc(fTotalMessagesSent);
 
-            // Fire event for each successful send
+            // Fire OnDataSent for STATISTICS/LOGGING ONLY!
             if Assigned(fOnDataSent) then
-              fOnDataSent(Self, ClientID, Command);
+              fOnDataSent(Self, ClientID, dataToSend);
           end;
         except
           on E: Exception do
