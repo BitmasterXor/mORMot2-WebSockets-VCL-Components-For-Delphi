@@ -53,13 +53,13 @@ type
   /// Forward declaration
   TmORMot2WebSocketClient = class;
 
-  /// SIMPLE events - NO encryption flags, just normal events
+  /// FIXED events - OnDataReceived/OnDataSent are for STATISTICS ONLY!
   TWebSocketConnectEvent = procedure(Sender: TObject) of object;
-  TWebSocketDataReceivedEvent = procedure(Sender: TObject; const Data: TBytes) of object;
-  TWebSocketDataSentEvent = procedure(Sender: TObject; const Data: TBytes) of object;
+  TWebSocketDataReceivedEvent = procedure(Sender: TObject; const Data: TBytes) of object;  // FOR STATISTICS/LOGGING ONLY!
+  TWebSocketDataSentEvent = procedure(Sender: TObject; const Data: TBytes) of object;  // FOR STATISTICS/LOGGING ONLY!
   TWebSocketDisconnectEvent = procedure(Sender: TObject) of object;
   TWebSocketErrorEvent = procedure(Sender: TObject; const ErrorMsg: string) of object;
-  TWebSocketHandleCommandEvent = procedure(Sender: TObject; const Command: TBytes) of object;
+  TWebSocketHandleCommandEvent = procedure(Sender: TObject; const Command: TBytes) of object;  // THIS IS WHERE YOU PROCESS DATA!
   TWebSocketReconnectingEvent = procedure(Sender: TObject; AttemptNumber: Integer) of object;
   TWebSocketReconnectFailedEvent = procedure(Sender: TObject; AttemptNumber: Integer; const ErrorMsg: string) of object;
 
@@ -124,13 +124,13 @@ type
     fReconnecting: Boolean;
     fUserDisconnected: Boolean;
 
-    // Events - SIMPLE, NO encryption flags
+    // FIXED Events - OnDataReceived/OnDataSent are for STATISTICS ONLY!
     fOnConnect: TWebSocketConnectEvent;
-    fOnDataReceived: TWebSocketDataReceivedEvent;
-    fOnDataSent: TWebSocketDataSentEvent;
+    fOnDataReceived: TWebSocketDataReceivedEvent;  // FOR STATISTICS/LOGGING ONLY!
+    fOnDataSent: TWebSocketDataSentEvent;  // FOR STATISTICS/LOGGING ONLY!
     fOnDisconnect: TWebSocketDisconnectEvent;
     fOnError: TWebSocketErrorEvent;
-    fOnHandleCommand: TWebSocketHandleCommandEvent;
+    fOnHandleCommand: TWebSocketHandleCommandEvent;  // THIS IS WHERE YOU PROCESS DATA!
     fOnStateChange: TWebSocketStateChangeEvent;
     fOnReconnecting: TWebSocketReconnectingEvent;
     fOnReconnectFailed: TWebSocketReconnectFailedEvent;
@@ -300,13 +300,13 @@ type
     /// Read-only connection state description
     property ConnectionStateDescription: string read GetConnectionStateDescription;
 
-    // Events - SIMPLE, NO encryption flags
+    // FIXED Events - OnDataReceived/OnDataSent are for STATISTICS ONLY!
     property OnConnect: TWebSocketConnectEvent read fOnConnect write fOnConnect;
-    property OnDataReceived: TWebSocketDataReceivedEvent read fOnDataReceived write fOnDataReceived;
-    property OnDataSent: TWebSocketDataSentEvent read fOnDataSent write fOnDataSent;
+    property OnDataReceived: TWebSocketDataReceivedEvent read fOnDataReceived write fOnDataReceived;  // FOR STATISTICS/LOGGING ONLY!
+    property OnDataSent: TWebSocketDataSentEvent read fOnDataSent write fOnDataSent;  // FOR STATISTICS/LOGGING ONLY!
     property OnDisconnect: TWebSocketDisconnectEvent read fOnDisconnect write fOnDisconnect;
     property OnError: TWebSocketErrorEvent read fOnError write fOnError;
-    property OnHandleCommand: TWebSocketHandleCommandEvent read fOnHandleCommand write fOnHandleCommand;
+    property OnHandleCommand: TWebSocketHandleCommandEvent read fOnHandleCommand write fOnHandleCommand;  // THIS IS WHERE YOU PROCESS DATA!
     property OnStateChange: TWebSocketStateChangeEvent read fOnStateChange write fOnStateChange;
     property OnReconnecting: TWebSocketReconnectingEvent read fOnReconnecting write fOnReconnecting;
     property OnReconnectFailed: TWebSocketReconnectFailedEvent read fOnReconnectFailed write fOnReconnectFailed;
@@ -406,7 +406,10 @@ begin
 
     // Use connection-specific salt for security
     Password := ToUtf8(fEncryptionKey);
-    Salt := ToUtf8(fEncryptionKey + '_client_' + fHost + '_' + IntToStr(fPort) + '_salt_2024');
+    if (fHost = '127.0.0.1') or (fHost = 'localhost') then
+  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
+else
+  Salt := ToUtf8(fEncryptionKey + '_client_' + fHost + '_' + IntToStr(fPort) + '_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
@@ -546,7 +549,10 @@ begin
 
     // Use SAME salt as encryption (connection-specific)
     Password := ToUtf8(fEncryptionKey);
-    Salt := ToUtf8(fEncryptionKey + '_client_' + fHost + '_' + IntToStr(fPort) + '_salt_2024');
+    if (fHost = '127.0.0.1') or (fHost = 'localhost') then
+  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
+else
+  Salt := ToUtf8(fEncryptionKey + '_client_' + fHost + '_' + IntToStr(fPort) + '_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
@@ -609,10 +615,12 @@ begin
   result := TWebSocketClientProtocol.Create(fOwner);
 end;
 
+// FIXED: Proper event handling - OnDataReceived for statistics, OnHandleCommand for processing
 procedure TWebSocketClientProtocol.ProcessIncomingFrame(Sender: TWebSocketProcess;
   var Request: TWebSocketFrame; const Info: RawUtf8);
 var
-  commandBytes: TBytes;
+  rawBytes: TBytes;
+  decryptedBytes: TBytes;
 begin
   if (fOwner <> nil) and (Sender <> nil) then
   begin
@@ -642,16 +650,21 @@ begin
         end;
       focText:
         begin
-          SetLength(commandBytes, Length(Request.payload));
-          if Length(commandBytes) > 0 then
-            Move(Request.payload[1], commandBytes[0], Length(commandBytes));
+          // Convert payload to TBytes
+          SetLength(rawBytes, Length(Request.payload));
+          if Length(rawBytes) > 0 then
+            Move(Request.payload[1], rawBytes[0], Length(rawBytes));
 
-          // FIXED: Try to decrypt with proper coordination
+          // FIXED: Fire OnDataReceived FIRST for statistics (with raw encrypted data)
+          fOwner.DoDataReceived(rawBytes);
+
+          // FIXED: Now decrypt the data for command processing
+          decryptedBytes := rawBytes;
           if fOwner.fEncryptionEnabled and (fOwner.fEncryptionKey <> '') then
-            commandBytes := fOwner.DecryptData(commandBytes);
+            decryptedBytes := fOwner.DecryptData(rawBytes);
 
-          fOwner.DoDataReceived(commandBytes);
-          fOwner.DoHandleCommand(commandBytes);
+          // FIXED: Fire OnHandleCommand for actual data processing (with decrypted data)
+          fOwner.DoHandleCommand(decryptedBytes);
         end;
     end;
   end;
@@ -684,7 +697,7 @@ begin
   fReceiveBufferSize := 8192;
   fSendBufferSize := 8192;
   fThreadPoolSize := 4;
-  fVersion := '2.0.5';  // Updated version for fixed encryption
+  fVersion := '2.0.6';  // Updated version for fixed event handling
   fMessageReceived := False;
   fMessageSent := False;
   fTotalBytesReceived := 0;
@@ -1392,13 +1405,14 @@ begin
   fReconnectAttempts := 0;
 end;
 
-// EVENT METHODS
+// FIXED EVENT METHODS - OnDataReceived for statistics, OnHandleCommand for processing
 procedure TmORMot2WebSocketClient.DoError(const ErrorMsg: string);
 begin
   if Assigned(fOnError) then
     fOnError(Self, ErrorMsg);
 end;
 
+// FIXED: OnDataReceived is for STATISTICS/LOGGING ONLY!
 procedure TmORMot2WebSocketClient.DoDataReceived(const Data: TBytes);
 begin
   UpdateBytesReceived(Length(Data));
@@ -1406,6 +1420,7 @@ begin
     fOnDataReceived(Self, Data);
 end;
 
+// FIXED: OnDataSent is for STATISTICS/LOGGING ONLY!
 procedure TmORMot2WebSocketClient.DoDataSent(const Data: TBytes);
 begin
   UpdateBytesSent(Length(Data));
@@ -1413,6 +1428,7 @@ begin
     fOnDataSent(Self, Data);
 end;
 
+// FIXED: OnHandleCommand is for ACTUAL DATA PROCESSING!
 procedure TmORMot2WebSocketClient.DoHandleCommand(const Command: TBytes);
 begin
   if Assigned(fOnHandleCommand) then
@@ -1484,7 +1500,7 @@ begin
     Result := fClient.WebSockets.SendFrame(frame);
 
     if Result then
-      DoDataSent(Command);
+      DoDataSent(dataToSend); // Send the encrypted data size for statistics
   except
     on E: Exception do
     begin
@@ -1534,4 +1550,3 @@ begin
 end;
 
 end.
-
