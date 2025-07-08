@@ -406,10 +406,7 @@ begin
 
     // Use connection-specific salt for security
     Password := ToUtf8(fEncryptionKey);
-    if (fHost = '127.0.0.1') or (fHost = 'localhost') then
-  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
-else
-  Salt := ToUtf8(fEncryptionKey + '_client_' + fHost + '_' + IntToStr(fPort) + '_salt_2024');
+    Salt := ToUtf8(fEncryptionKey + '_hardcoded_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
@@ -549,10 +546,7 @@ begin
 
     // Use SAME salt as encryption (connection-specific)
     Password := ToUtf8(fEncryptionKey);
-    if (fHost = '127.0.0.1') or (fHost = 'localhost') then
-  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
-else
-  Salt := ToUtf8(fEncryptionKey + '_client_' + fHost + '_' + IntToStr(fPort) + '_salt_2024');
+    Salt := ToUtf8(fEncryptionKey + '_hardcoded_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
