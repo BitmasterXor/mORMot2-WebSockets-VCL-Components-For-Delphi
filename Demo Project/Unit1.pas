@@ -103,8 +103,6 @@ type
       const StateDescription: string);
     procedure ServerClientConnected(Sender: TObject; ClientID: Integer);
     procedure ServerClientDisconnected(Sender: TObject; ClientID: Integer);
-    procedure ServerDataReceived(Sender: TObject; ClientID: Integer;
-      const Data: TBytes);
     procedure ServerError(Sender: TObject; const ErrorMsg: string);
 
     // Client events
@@ -117,7 +115,6 @@ type
       const StateDescription: string);
     procedure ClientConnect(Sender: TObject);
     procedure ClientDisconnect(Sender: TObject);
-    procedure ClientDataReceived(Sender: TObject; const Data: TBytes);
     procedure ClientError(Sender: TObject; const ErrorMsg: string);
 
     // Settings events
@@ -125,6 +122,18 @@ type
     procedure CheckBoxClientEncryptionClick(Sender: TObject);
     procedure TimerStatsTimer(Sender: TObject);
     procedure CheckBox1Click(Sender: TObject);
+    procedure ServerHandleCommand(Sender: TObject; ClientID: Integer;
+      const Command: TBytes);
+    procedure ServerDataReceived(Sender: TObject; ClientID: Integer;
+      const Data: TBytes);
+    procedure ServerDataSent(Sender: TObject; ClientID: Integer;
+      const Data: TBytes);
+    procedure ClientHandleCommand(Sender: TObject; const Command: TBytes);
+    procedure ClientReconnecting(Sender: TObject; AttemptNumber: Integer);
+    procedure ClientDataReceived(Sender: TObject; const Data: TBytes);
+    procedure ClientDataSent(Sender: TObject; const Data: TBytes);
+    procedure ClientReconnectFailed(Sender: TObject; AttemptNumber: Integer;
+      const ErrorMsg: string);
 
   private
     // Screenshot functionality
@@ -286,6 +295,7 @@ begin
   LogServer(Format('Client %d connected from %s',
     [ClientID, Server.GetClientIP(ClientID)]));
   UpdateClientList;
+  application.ProcessMessages;
   UpdateServerStatus;
 end;
 
@@ -308,12 +318,29 @@ end;
 
 procedure TForm1.ServerDataReceived(Sender: TObject; ClientID: Integer;
   const Data: TBytes);
+begin
+logserver('Server Recieved This RAW Unprocessed data: ' + stringof(Data) + ' From This Client: ' + inttostr(ClientID));
+end;
+
+procedure TForm1.ServerDataSent(Sender: TObject; ClientID: Integer;
+  const Data: TBytes);
+begin
+logserver('Server SENT This RAW Unprocessed data: ' + stringof(Data) + ' TO This Client: ' + inttostr(ClientID));
+end;
+
+procedure TForm1.ServerError(Sender: TObject; const ErrorMsg: string);
+begin
+  LogServer('Server Error: ' + ErrorMsg);
+end;
+
+procedure TForm1.ServerHandleCommand(Sender: TObject; ClientID: Integer;
+  const Command: TBytes);
 var
   Msg: TWebSocketMessage;
   ResponseData: TBytes;
 begin
   try
-    Msg := ParseMessage(Data);
+    Msg := ParseMessage(Command);
 
     case Msg.MessageType of
       mtText:
@@ -349,11 +376,6 @@ begin
       LogServer('Error parsing message from client ' + IntToStr(ClientID) + ': '
         + E.Message);
   end;
-end;
-
-procedure TForm1.ServerError(Sender: TObject; const ErrorMsg: string);
-begin
-  LogServer('Server Error: ' + ErrorMsg);
 end;
 
 // =============================================================================
@@ -441,19 +463,34 @@ begin
   UpdateClientStatus;
 end;
 
+procedure TForm1.ClientDataReceived(Sender: TObject; const Data: TBytes);
+begin
+logclient('Client Recieved This RAW Unprocessed data: ' + stringof(Data));
+end;
+
+procedure TForm1.ClientDataSent(Sender: TObject; const Data: TBytes);
+begin
+logclient('Client Sent This RAW unprocessed data: ' + stringof(Data));
+end;
+
 procedure TForm1.ClientDisconnect(Sender: TObject);
 begin
   LogClient('Disconnected from server');
   UpdateClientStatus;
 end;
 
-procedure TForm1.ClientDataReceived(Sender: TObject; const Data: TBytes);
+procedure TForm1.ClientError(Sender: TObject; const ErrorMsg: string);
+begin
+  LogClient('Client Error: ' + ErrorMsg);
+end;
+
+procedure TForm1.ClientHandleCommand(Sender: TObject; const Command: TBytes);
 var
   Msg: TWebSocketMessage;
   Bitmap: TBitmap;
 begin
   try
-    Msg := ParseMessage(Data);
+    Msg := ParseMessage(Command);
 
     case Msg.MessageType of
       mtText:
@@ -493,9 +530,15 @@ begin
   end;
 end;
 
-procedure TForm1.ClientError(Sender: TObject; const ErrorMsg: string);
+procedure TForm1.ClientReconnectFailed(Sender: TObject; AttemptNumber: Integer;
+  const ErrorMsg: string);
 begin
-  LogClient('Client Error: ' + ErrorMsg);
+logclient('Client was unable to re-connect!');
+end;
+
+procedure TForm1.ClientReconnecting(Sender: TObject; AttemptNumber: Integer);
+begin
+
 end;
 
 // =============================================================================
@@ -697,8 +740,8 @@ begin
     ButtonStopServer.Enabled := False;
   end;
 
-  LabelClientCount.Caption := Format('Connected Clients: %d',
-    [Server.GetClientCount]);
+ LabelClientCount.Caption := Format('Connected Clients: %d',
+    [Server.TotalActiveConnections]);
 end;
 
 procedure TForm1.UpdateClientStatus;
