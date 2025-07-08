@@ -495,7 +495,7 @@ end.
 - ✅ Bulletproof WebSocket client disconnect handling
 - ✅ Advanced connection state management with human-readable descriptions
 - ✅ Improved error handling and WebSocket event management
-- ✅ Enhanced encryption context management with salt coordination
+- ✅ Enhanced encryption context management with salt coordination (Just a hardcoded Salt on both client/server) May enhance the way we generate these salts in the future!
 
 ---
 
