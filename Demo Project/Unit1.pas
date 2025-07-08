@@ -286,6 +286,7 @@ begin
   LogServer(Format('Client %d connected from %s',
     [ClientID, Server.GetClientIP(ClientID)]));
   UpdateClientList;
+  UpdateServerStatus;
 end;
 
 procedure TForm1.ServerClientDisconnected(Sender: TObject; ClientID: Integer);
@@ -302,6 +303,7 @@ begin
     end;
   end;
   LogServer(Format('Client %d disconnected', [ClientID]));
+  UpdateServerStatus;
 end;
 
 procedure TForm1.ServerDataReceived(Sender: TObject; ClientID: Integer;
