@@ -150,7 +150,7 @@ object Form1: TForm1
           Top = 24
           Width = 99
           Height = 13
-          Caption = 'Total Connections: 0'
+          Caption = 'Total Connections Made: 0'
         end
         object LabelBytesReceived: TLabel
           Left = 16
