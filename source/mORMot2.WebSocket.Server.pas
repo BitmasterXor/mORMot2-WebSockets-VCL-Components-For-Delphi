@@ -1044,10 +1044,7 @@ begin
 
     // FIXED: Use SAME salt derivation as client
     Password := ToUtf8(fEncryptionKey);
-    if (ClientIP = '127.0.0.1') or (ClientIP = 'localhost') or (ClientIP = '') then
-  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
-else
-  Salt := ToUtf8(fEncryptionKey + '_client_' + ClientIP + '_' + IntToStr(fPort) + '_salt_2024');
+    Salt := ToUtf8(fEncryptionKey + '_hardcoded_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
@@ -1198,10 +1195,7 @@ begin
 
     // FIXED: Use SAME salt derivation as client
     Password := ToUtf8(fEncryptionKey);
-    if (ClientIP = '127.0.0.1') or (ClientIP = 'localhost') or (ClientIP = '') then
-  Salt := ToUtf8(fEncryptionKey + '_client_localhost_' + IntToStr(fPort) + '_salt_2024')
-else
-  Salt := ToUtf8(fEncryptionKey + '_client_' + ClientIP + '_' + IntToStr(fPort) + '_salt_2024');
+    Salt := ToUtf8(fEncryptionKey + '_hardcoded_salt_2024');
     Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
 
     try
