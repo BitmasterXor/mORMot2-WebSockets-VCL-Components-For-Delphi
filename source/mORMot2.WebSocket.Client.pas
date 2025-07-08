@@ -684,7 +684,7 @@ begin
   fReceiveBufferSize := 8192;
   fSendBufferSize := 8192;
   fThreadPoolSize := 4;
-  fVersion := '2.0.4';  // Updated version for fixed encryption
+  fVersion := '2.0.5';  // Updated version for fixed encryption
   fMessageReceived := False;
   fMessageSent := False;
   fTotalBytesReceived := 0;
