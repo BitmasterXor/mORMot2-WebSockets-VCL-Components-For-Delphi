@@ -92,7 +92,7 @@ type
     function Clone(const aClientUri: RawUtf8): TWebSocketProtocol; override;
   end;
 
-  /// FIXED: Custom async server that properly tracks connections
+  /// FIXED: Custom async server that properly tracks connections AND ENFORCES MAX CONNECTIONS
   TCustomAsyncServerRest = class(TWebSocketAsyncServerRest)
   private
     fOwnerComponent: TmORMot2WebSocketServer;
@@ -273,6 +273,10 @@ type
     function GetClientStateAsString(ClientID: Integer): string;
     function GetAllClientStates: string;
 
+    // NEW CONNECTION LIMIT METHODS
+    function CanAcceptNewConnection: Boolean;
+    function GetConnectionsRemaining: Integer;
+
     // FIXED: Internal event handlers called by custom server and protocol
     procedure OnInternalClientConnected(ClientID: Integer;
       Connection: TWebSocketAsyncConnection; const ClientIP: string);
@@ -418,7 +422,7 @@ begin
 end;
 
 // =============================================================================
-// CUSTOM ASYNC SERVER IMPLEMENTATION - FIXED IP DETECTION
+// CUSTOM ASYNC SERVER IMPLEMENTATION - FIXED IP DETECTION + MAX CONNECTIONS ENFORCEMENT
 // =============================================================================
 
 { TCustomAsyncServerRest }
@@ -618,11 +622,35 @@ begin
   WebSocketBroadcast(frame, nil);
 end;
 
+// FIXED: ENFORCES MAX CONNECTIONS LIMIT!
 procedure TCustomAsyncServerRest.DoConnect(Context: TWebSocketAsyncConnection);
 var
   ClientID: Integer;
   ClientIP: string;
 begin
+  // CHECK MAX CONNECTIONS FIRST - REJECT IF OVER LIMIT!
+  if (fOwnerComponent <> nil) and
+     (fOwnerComponent.fMaxConnections > 0) and
+     (fOwnerComponent.fClientCount >= fOwnerComponent.fMaxConnections) then
+  begin
+    // LOG THE REJECTION
+    ClientIP := ExtractIPFromConnection(Context);
+    if fOwnerComponent <> nil then
+      fOwnerComponent.DoError(Format('Connection REJECTED from %s: Maximum connections (%d) reached',
+        [ClientIP, fOwnerComponent.fMaxConnections]));
+
+    // CLOSE THE CONNECTION IMMEDIATELY
+    try
+      Context.Socket.Close;
+    except
+      // Ignore close errors
+    end;
+
+    // DO NOT CALL INHERITED - REJECT THE CONNECTION!
+    Exit;
+  end;
+
+  // Only proceed if under the limit
   inherited DoConnect(Context);
 
   if fOwnerComponent <> nil then
@@ -713,7 +741,7 @@ begin
   fSendBufferSize := 8192;
   fTag := 0;
   fThreadPoolSize := 4;
-  fVersion := '2.0.5'; // Updated version for complete feature set
+  fVersion := '2.0.6'; // Updated version for connection limit fix
 
   // Statistics
   fTotalActiveConnections := 0;
@@ -856,6 +884,23 @@ begin
   finally
     fClientLock.Leave;
   end;
+end;
+
+// =============================================================================
+// CONNECTION LIMIT METHODS - NEW!
+// =============================================================================
+
+function TmORMot2WebSocketServer.CanAcceptNewConnection: Boolean;
+begin
+  Result := (fMaxConnections <= 0) or (fClientCount < fMaxConnections);
+end;
+
+function TmORMot2WebSocketServer.GetConnectionsRemaining: Integer;
+begin
+  if fMaxConnections <= 0 then
+    Result := -1  // Unlimited
+  else
+    Result := fMaxConnections - fClientCount;
 end;
 
 // =============================================================================
@@ -1227,6 +1272,13 @@ begin
   try
     SetServerState(ssStarting);
 
+    // VALIDATE MAX CONNECTIONS SETTING
+    if fMaxConnections <= 0 then
+    begin
+      DoError('MaxConnections must be greater than 0');
+      raise Exception.Create('Invalid MaxConnections value');
+    end;
+
     // Stop any existing server
     InternalStop;
     fLastError := '';
@@ -1504,10 +1556,17 @@ begin
 end;
 
 function TmORMot2WebSocketServer.GetServerStats: string;
+var
+  ConnectionInfo: string;
 begin
+  if fMaxConnections > 0 then
+    ConnectionInfo := Format('%d/%d', [fClientCount, fMaxConnections])
+  else
+    ConnectionInfo := Format('%d/unlimited', [fClientCount]);
+
   Result := Format
-    ('State: %s, Active: %s, Clients: %d, Total Connections: %d, Msgs Sent: %d, Msgs Received: %d, Bytes Sent: %d, Bytes Received: %d, Encryption: %s',
-    [ServerStateToString(fServerState), BoolToStr(fActive, True), fClientCount,
+    ('State: %s, Active: %s, Connections: %s, Total Connections: %d, Msgs Sent: %d, Msgs Received: %d, Bytes Sent: %d, Bytes Received: %d, Encryption: %s',
+    [ServerStateToString(fServerState), BoolToStr(fActive, True), ConnectionInfo,
     fTotalConnections, fTotalMessagesSent, fTotalMessagesReceived, fTotalBytesSent, fTotalBytesReceived, GetEncryptionInfo]);
 end;
 
@@ -1614,8 +1673,16 @@ end;
 
 procedure TmORMot2WebSocketServer.SetMaxConnections(const Value: Integer);
 begin
+  if Value <= 0 then
+    raise Exception.Create('MaxConnections must be greater than 0');
+
   if fMaxConnections <> Value then
+  begin
+    if fActive and (Value < fClientCount) then
+      raise Exception.Create(Format('Cannot set MaxConnections to %d - currently have %d active connections',
+        [Value, fClientCount]));
     fMaxConnections := Value;
+  end;
 end;
 
 procedure TmORMot2WebSocketServer.SetName(const Value: string);
