@@ -17,10 +17,10 @@
 <div align="center">
 
 ### 🖥️ **WebSocket Server Component**
-![WebSocket Server Component Preview](preview_ws_server.png)
+![WebSocket Server Component Preview](preview1.png)
 
 ### 💻 **WebSocket Client Component**  
-![WebSocket Client Component Preview](preview_ws_client.png)
+![WebSocket Client Component Preview](preview2.png)
 
 *See the components in action with real-time WebSocket connections, bulletproof encryption, and enterprise-grade performance!*
 
