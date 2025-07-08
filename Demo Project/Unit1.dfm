@@ -436,7 +436,7 @@ object Form1: TForm1
     Name = ''
     Host = 'localhost'
     URI = '/'
-    Version = '2.0.4'
+    Version = '2.0.5'
     OnConnect = ClientConnect
     OnDataReceived = ClientDataReceived
     OnDisconnect = ClientDisconnect
