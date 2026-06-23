@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="/"/>
+    <Name Value="mORMot2WebSocketComponents"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value=""/>
+    <Description Value="mORMot2 WebSocket Components for Lazarus - TmORMot2WebSocketServer and TmORMot2WebSocketClient with full encryption support"/>
+    <License Value="MIT"/>
+    <Version Major="2" Minor="0" Release="7"/>
+    <Files>
+      <Item>
+        <Filename Value="source/mORMot2.WebSocket.Client.pas"/>
+        <UnitName Value="mORMot2.WebSocket.Client"/>
+      </Item>
+      <Item>
+        <Filename Value="source/mORMot2.WebSocket.Server.pas"/>
+        <UnitName Value="mORMot2.WebSocket.Server"/>
+      </Item>
+      <Item>
+        <Filename Value="source/mORMot2.WebSocket.Register.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="mORMot2.WebSocket.Register"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="mormot2"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="ideintf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="source"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Linking>
+        <Debugging>
+          <GenerateDebugInfo Value="False"/>
+        </Debugging>
+      </Linking>
+    </CompilerOptions>
+  </Package>
+</CONFIG>
