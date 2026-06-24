@@ -1,0 +1,2557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <UserPkgLinks Version="3" Count="371">
+    <Item1>
+      <Name Value="Abbrevia"/>
+      <Version Major="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Abbrevia/packages/Lazarus/abbrevia.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item1>
+    <Item2>
+      <Name Value="ABProjectFiles"/>
+      <Version Major="2" Minor="4" Release="1" Build="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ABProjectFiles/abprojectfiles.lpk"/>
+      <LastUsed Value="2026/06/13 14:07:06"/>
+    </Item2>
+    <Item3>
+      <Name Value="alternative_castle_window_based_on_lcl"/>
+      <Version Major="6" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/castle-engine-master/packages/alternative_castle_window_based_on_lcl.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:24"/>
+    </Item3>
+    <Item4>
+      <Name Value="amw_ide_tools"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LAMW/ide_tools/amw_ide_tools.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item4>
+    <Item5>
+      <Name Value="appexplore"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Lazarus AppExplore/appexplore.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item5>
+    <Item6>
+      <Name Value="atbinhex_package"/>
+      <Version Major="1" Minor="2" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATBinHex/atbinhex/atbinhex_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item6>
+    <Item7>
+      <Name Value="atextendeddialogs_package"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATExtendedDialogs-master/atextendeddialogs/atextendeddialogs_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item7>
+    <Item8>
+      <Name Value="atfilenotif_pkg"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATFileNotif-Lazarus/src/atfilenotif_pkg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item8>
+    <Item9>
+      <Name Value="atflatcontrols_package"/>
+      <Version Major="2" Minor="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATFlatControls/atflatcontrols/atflatcontrols_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item9>
+    <Item10>
+      <Name Value="atimagebox_package"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATImageBox/atimagebox/atimagebox_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item10>
+    <Item11>
+      <Name Value="ATShapeLine_package"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATShapeLine/atshapeline/atshapeline_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item11>
+    <Item12>
+      <Name Value="atsynedit_cmp_package"/>
+      <Version Major="2" Minor="3" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATSynEdit_Cmp/atsynedit_cmp/atsynedit_cmp_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:10:50"/>
+    </Item12>
+    <Item13>
+      <Name Value="atsynedit_ex_package"/>
+      <Version Major="2" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATSynEdit_Ex/atsynedit_ex/atsynedit_ex_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:10:52"/>
+    </Item13>
+    <Item14>
+      <Name Value="atsynedit_package"/>
+      <Version Major="2" Minor="26"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atsynedit_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item14>
+    <Item15>
+      <Name Value="autosave"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/AutoSave/autosave.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item15>
+    <Item16>
+      <Name Value="baredsgn"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Bare.Game-master/tools/design/baredsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item16>
+    <Item17>
+      <Name Value="barerun"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Bare.Game-master/source/barerun.lpk"/>
+      <LastUsed Value="2026/06/13 14:10:55"/>
+    </Item17>
+    <Item18>
+      <Name Value="BGLControls"/>
+      <Version Major="1" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/BGRABitmap/bglcontrols/bglcontrols.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item18>
+    <Item19>
+      <Name Value="BGRABitmapPack"/>
+      <Version Major="11" Minor="6" Release="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/BGRABitmap/bgrabitmap/bgrabitmappack.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item19>
+    <Item20>
+      <Name Value="bgracontrols"/>
+      <Version Major="9" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/BGRAControls/bgracontrols.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item20>
+    <Item21>
+      <Name Value="bgragames"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/bgragames-master/bgragames.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:12"/>
+    </Item21>
+    <Item22>
+      <Name Value="bgrapascalscriptcomponent"/>
+      <Version Major="9" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/BGRAControls/bgrapascalscriptcomponent.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item22>
+    <Item23>
+      <Name Value="bithelpers_pkg"/>
+      <Version Major="1" Minor="1" Build="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Bithelpers/bithelpers_pkg.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:14"/>
+    </Item23>
+    <Item24>
+      <Name Value="Box2d"/>
+      <Version Major="2" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Box2D/Box2d.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:14"/>
+    </Item24>
+    <Item25>
+      <Name Value="BrookDT"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/brookfreepascal/packages/brookdt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item25>
+    <Item26>
+      <Name Value="BrookEX"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/brookfreepascal/packages/brookex.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item26>
+    <Item27>
+      <Name Value="BrookRT"/>
+      <Version Major="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/brookfreepascal/packages/brookrt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item27>
+    <Item28>
+      <Name Value="cadsys"/>
+      <Version Major="4" Minor="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CADSys42/Packages/Lazarus/cadsys.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item28>
+    <Item29>
+      <Name Value="callight_pkg"/>
+      <Version Minor="3" Release="12"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/callite/callight_pkg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item29>
+    <Item30>
+      <Name Value="castle_base"/>
+      <Version Major="6" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/castle-engine-master/packages/castle_base.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:20"/>
+    </Item30>
+    <Item31>
+      <Name Value="castle_components"/>
+      <Version Major="6" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/castle-engine-master/packages/castle_components.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:23"/>
+    </Item31>
+    <Item32>
+      <Name Value="castle_window"/>
+      <Version Major="6" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/castle-engine-master/packages/castle_window.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:25"/>
+    </Item32>
+    <Item33>
+      <Name Value="CEF4Delphi_Lazarus"/>
+      <Version Major="90" Minor="5" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CEF4Delphi/packages/cef4delphi_lazarus.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:27"/>
+    </Item33>
+    <Item34>
+      <Name Value="CeosMW"/>
+      <Version Release="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ceosmw/ceosmw.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item34>
+    <Item35>
+      <Name Value="cgi"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CGI/cgi.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item35>
+    <Item36>
+      <Name Value="cgiide"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CGI/cgiide.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item36>
+    <Item37>
+      <Name Value="chronolog_package"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/chronolog/chronolog_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:31"/>
+    </Item37>
+    <Item38>
+      <Name Value="chsdet"/>
+      <Version Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/chsdet/chsdet.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:31"/>
+    </Item38>
+    <Item39>
+      <Name Value="cmdbox"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/cmdline/cmdbox.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item39>
+    <Item40>
+      <Name Value="codelibrarian"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CodeLibrarian/codelibrarian.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item40>
+    <Item41>
+      <Name Value="CodeSigningPackage"/>
+      <Version Minor="1" Release="4" Build="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lazcodesigninghelper-master/source/CodeSigningPackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item41>
+    <Item42>
+      <Name Value="CodeStats"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CodeStats/CodeStats.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item42>
+    <Item43>
+      <Name Value="cryptini"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/cryptini/cryptini.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:38"/>
+    </Item43>
+    <Item44>
+      <Name Value="CryptoLib4PascalPackage"/>
+      <Version Major="3" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/CryptoLib/CryptoLib/src/Packages/FPC/CryptoLib4PascalPackage.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:42"/>
+    </Item44>
+    <Item45>
+      <Name Value="d2bridgeframeworkwizard"/>
+      <Version Major="1" Minor="38"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/D2Bridge Framework/LazIDEplugin/d2bridgeframeworkwizard.lpk"/>
+      <LastUsed Value="2026/06/13 14:12:06"/>
+    </Item45>
+    <Item46>
+      <Name Value="datahub_package"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/datahub/datahub_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item46>
+    <Item47>
+      <Name Value="DataPortLasarus"/>
+      <Version Major="1" Release="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DataPort/dataportlasarus.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item47>
+    <Item48>
+      <Name Value="DBGridController"/>
+      <Version Major="1" Release="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DBGridController/DBGridController.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item48>
+    <Item49>
+      <Name Value="dclibx"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/dclibx.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item49>
+    <Item50>
+      <Name Value="dcl_rxtools"/>
+      <Version Major="1" Release="2" Build="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/dcl_rxtools.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item50>
+    <Item51>
+      <Name Value="dcl_rx_ctrl"/>
+      <Version Major="3" Minor="3" Release="1" Build="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/dcl_rx_ctrl.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item51>
+    <Item52>
+      <Name Value="dcpcrypt"/>
+      <Version Major="2" Release="4" Build="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DCPcrypt/dcpcrypt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item52>
+    <Item53>
+      <Name Value="dcpcrypt_laz"/>
+      <Version Major="2" Release="4" Build="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DCPcrypt/dcpcrypt_laz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item53>
+    <Item54>
+      <Name Value="DelphiTwain_pkg"/>
+      <Version Major="2" Minor="3" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DelphiTwain/delphitwain_pkg.lpk"/>
+      <LastUsed Value="2026/06/13 14:20:29"/>
+    </Item54>
+    <Item55>
+      <Name Value="dexif_package"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/dexif/dexif_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:12:15"/>
+    </Item55>
+    <Item56>
+      <Name Value="dmath"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DMath/dmath.lpk"/>
+      <LastUsed Value="2026/06/13 14:12:16"/>
+    </Item56>
+    <Item57>
+      <Name Value="DragDropLazarus"/>
+      <Version Major="5" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/DragDrop/Source/DragDropLazarus.lpk"/>
+      <LastUsed Value="2026/06/13 14:12:17"/>
+    </Item57>
+    <Item58>
+      <Name Value="eccontrols"/>
+      <Version Minor="9" Release="58"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/EC_Controls/EC_Controls/eccontrols.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item58>
+    <Item59>
+      <Name Value="econtrol_package"/>
+      <Version Major="2" Minor="3" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/EControl/econtrol/econtrol_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:10:51"/>
+    </Item59>
+    <Item60>
+      <Name Value="emmet_package"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Emmet-Pascal/emmet/emmet_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:12:24"/>
+    </Item60>
+    <Item61>
+      <Name Value="encconv_package"/>
+      <Version Major="1" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/EncConv/encconv/encconv_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item61>
+    <Item62>
+      <Name Value="etpackage"/>
+      <Version Major="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/epiktimer/etpackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item62>
+    <Item63>
+      <Name Value="etpackage_dsgn"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/epiktimer/etpackage_dsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item63>
+    <Item64>
+      <Name Value="ExceptionLogger"/>
+      <Version Major="1" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExceptionLogger/ExceptionLogger.lpk"/>
+      <LastUsed Value="2026/06/13 14:12:31"/>
+    </Item64>
+    <Item65>
+      <Name Value="ExtraHighlighters"/>
+      <Version Major="1" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/extrasyn/extrahighlighters.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item65>
+    <Item66>
+      <Name Value="ExtraHighlighters_Dsgn"/>
+      <Version Major="1" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/extrasyn/extrahighlighters_dsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item66>
+    <Item67>
+      <Name Value="fbintf"/>
+      <Version Major="1" Minor="4" Release="9" Build="1258"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FBIntf/fbintf.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item67>
+    <Item68>
+      <Name Value="fbudr"/>
+      <Version Major="1" Minor="4" Release="9" Build="1258"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FBIntf/fbudr.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:27"/>
+    </Item68>
+    <Item69>
+      <Name Value="fbudrTestbed"/>
+      <Version Major="1" Minor="4" Release="9" Build="1258"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FBIntf/fbudrTestbed.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:28"/>
+    </Item69>
+    <Item70>
+      <Name Value="fclwebwst"/>
+      <Version Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wst/ide/lazarus/wstmodule/fclwebwst.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item70>
+    <Item71>
+      <Name Value="fcl_bridges_pack"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LAMW/fcl_bridges/fcl_bridges_pack.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item71>
+    <Item72>
+      <Name Value="FileAssociation"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FileAssociation-master/fileassociation.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:29"/>
+    </Item72>
+    <Item73>
+      <Name Value="FileMenuHandler"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FileMenuHandler/FileMenuHandler.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item73>
+    <Item74>
+      <Name Value="FitGrids"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/fitgrids-master/FitGrids.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item74>
+    <Item75>
+      <Name Value="flagpackage"/>
+      <Version Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/flagcomponent/flagpackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item75>
+    <Item76>
+      <Name Value="fortes324forlaz"/>
+      <Version Major="3" Minor="24" Release="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Fortes4Lazarus/fortes324forlaz.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:33"/>
+    </Item76>
+    <Item77>
+      <Name Value="fpOdf"/>
+      <Version Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/fpOdf/package/fpodf.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:37"/>
+    </Item77>
+    <Item78>
+      <Name Value="fpowm"/>
+      <Version Major="1" Minor="1" Release="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/OpenWeatherMap/fpowm.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item78>
+    <Item79>
+      <Name Value="fptelegram"/>
+      <Version Release="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FpTelegram/fptelegram.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item79>
+    <Item80>
+      <Name Value="fptelegram_dt"/>
+      <Version Release="1" Build="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FpTelegram/fptelegram_dt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item80>
+    <Item81>
+      <Name Value="fp_tera_tpl"/>
+      <Version Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/fp-tera-tpl/packages/Lazarus/fp_tera_tpl.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:36"/>
+    </Item81>
+    <Item82>
+      <Name Value="FrameViewer09"/>
+      <Version Major="11" Minor="8" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/HtmlViewer/package/FrameViewer09.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item82>
+    <Item83>
+      <Name Value="frce"/>
+      <Version Major="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/fortesreport-ce4/Packages/frce.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item83>
+    <Item84>
+      <Name Value="gifviewer_pkg"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TGIFViewer/package/gifviewer_pkg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item84>
+    <Item85>
+      <Name Value="GLScene_DesignTime"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/GLSceneLCL/Packages/GLScene_DesignTime.lpk"/>
+      <LastUsed Value="2026/06/13 14:14:03"/>
+    </Item85>
+    <Item86>
+      <Name Value="GLScene_RunTime"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/GLSceneLCL/Packages/GLScene_RunTime.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:55"/>
+    </Item86>
+    <Item87>
+      <Name Value="Gold_Parser_5"/>
+      <Version Major="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/GOLDParser/src/gold_parser_5.lpk"/>
+      <LastUsed Value="2026/06/13 14:14:06"/>
+    </Item87>
+    <Item88>
+      <Name Value="GridPrinterPkg"/>
+      <Version Minor="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/GridPrinter/gridprinterpkg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item88>
+    <Item89>
+      <Name Value="HashLib4PascalPackage"/>
+      <Version Major="4" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/HashLib/HashLib/src/Packages/FPC/HashLib4PascalPackage.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:39"/>
+    </Item89>
+    <Item90>
+      <Name Value="HistoryLazarus"/>
+      <Version Major="1" Minor="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/HistoryFiles/HistoryLazarus.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item90>
+    <Item91>
+      <Name Value="ibcontrols"/>
+      <Version Major="1" Release="1" Build="9"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBControls/ibcontrols.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item91>
+    <Item92>
+      <Name Value="ibexpress"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/ibexpress.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item92>
+    <Item93>
+      <Name Value="ibexpressconsolemode"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/ibexpressconsolemode.lpk"/>
+      <LastUsed Value="2026/06/13 14:14:18"/>
+    </Item93>
+    <Item94>
+      <Name Value="ibLegacyServices"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/ibLegacyServices.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item94>
+    <Item95>
+      <Name Value="iblocaldb"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/iblocaldb.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item95>
+    <Item96>
+      <Name Value="iblocalnongui"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/iblocalnongui.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item96>
+    <Item97>
+      <Name Value="ibnongui"/>
+      <Version Major="2" Minor="7" Release="11" Build="1673"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IBX4Lazarus/ibnongui.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item97>
+    <Item98>
+      <Name Value="IDEFileManager"/>
+      <Version Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IDE-FileManager/ide-file-manager/idefilemanager.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item98>
+    <Item99>
+      <Name Value="idesearchpanelp"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazIdeSearchPanel/idesearchpanelp.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item99>
+    <Item100>
+      <Name Value="ImageSVGListDsgn"/>
+      <Version Major="1" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ImageSVGListDsgn/imagesvglistdsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item100>
+    <Item101>
+      <Name Value="industrial"/>
+      <Version Minor="6" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IndustrialStuff/industrial.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item101>
+    <Item102>
+      <Name Value="indylaz"/>
+      <Version Major="10" Minor="6" Release="3" Build="11"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Indy10/indylaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item102>
+    <Item103>
+      <Name Value="indylaz_openssl"/>
+      <Version Major="1" Build="57"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IndySecOpenSSL/lazarus-fpc/indylaz_openssl.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item103>
+    <Item104>
+      <Name Value="IndySecOpenSSL"/>
+      <Version Major="1" Build="57"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/IndySecOpenSSL/lazarus-fpc/IndySecOpenSSL.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item104>
+    <Item105>
+      <Name Value="IPEdit_pkg"/>
+      <Version Major="1" Minor="3" Build="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TIPEdit/ipedit_pkg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item105>
+    <Item106>
+      <Name Value="jujiboutils"/>
+      <Version Major="2" Minor="5" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/jujiboutils/jujiboutils.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item106>
+    <Item107>
+      <Name Value="JvAppFrmLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvappfrmlazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item107>
+    <Item108>
+      <Name Value="JvAppFrmLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvappfrmlazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item108>
+    <Item109>
+      <Name Value="jvcl_all"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcl_all.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item109>
+    <Item110>
+      <Name Value="JvCmpD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcmpd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item110>
+    <Item111>
+      <Name Value="JvCmpR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcmpr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item111>
+    <Item112>
+      <Name Value="JvCoreLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcorelazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item112>
+    <Item113>
+      <Name Value="JvCoreLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcorelazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item113>
+    <Item114>
+      <Name Value="JvCtrlsLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvctrlslazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item114>
+    <Item115>
+      <Name Value="JvCtrlsLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvctrlslazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item115>
+    <Item116>
+      <Name Value="JvCustomLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcustomlazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item116>
+    <Item117>
+      <Name Value="JvCustomLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvcustomlazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item117>
+    <Item118>
+      <Name Value="JvDBLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvdblazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item118>
+    <Item119>
+      <Name Value="JvDBLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvdblazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item119>
+    <Item120>
+      <Name Value="JvHMILazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvhmilazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item120>
+    <Item121>
+      <Name Value="JvHMILazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvhmilazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item121>
+    <Item122>
+      <Name Value="JvJansLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvjanslazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item122>
+    <Item123>
+      <Name Value="JvJansLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvjanslazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item123>
+    <Item124>
+      <Name Value="JvMMLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvmmlazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item124>
+    <Item125>
+      <Name Value="JvMMLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvmmlazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item125>
+    <Item126>
+      <Name Value="JvNetLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvnetlazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item126>
+    <Item127>
+      <Name Value="JvNetLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvnetlazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item127>
+    <Item128>
+      <Name Value="JvPageCompsD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvpagecompsd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item128>
+    <Item129>
+      <Name Value="JvPageCompsR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvpagecompsr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item129>
+    <Item130>
+      <Name Value="JvPascalInterpreterD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvpascalinterpreterd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item130>
+    <Item131>
+      <Name Value="JvPascalInterpreterR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvpascalinterpreterr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item131>
+    <Item132>
+      <Name Value="JvRuntimeDesignLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvruntimedesignlazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item132>
+    <Item133>
+      <Name Value="JvRuntimeDesignLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvruntimedesignlazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item133>
+    <Item134>
+      <Name Value="JvStdCtrlsLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvstdctrlslazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item134>
+    <Item135>
+      <Name Value="JvStdCtrlsLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvstdctrlslazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item135>
+    <Item136>
+      <Name Value="JvTimeFrameworkLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvtimeframeworklazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item136>
+    <Item137>
+      <Name Value="JvTimeFrameworkLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvtimeframeworklazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item137>
+    <Item138>
+      <Name Value="JvValidatorsLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvvalidatorslazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item138>
+    <Item139>
+      <Name Value="JvValidatorsLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvvalidatorslazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item139>
+    <Item140>
+      <Name Value="JvWizardLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvwizardlazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item140>
+    <Item141>
+      <Name Value="JvWizardLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvwizardlazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item141>
+    <Item142>
+      <Name Value="JvXPCtrlsLazD"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvxpctrlslazd.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item142>
+    <Item143>
+      <Name Value="JvXPCtrlsLazR"/>
+      <Version Major="1" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/JvclLaz/packages/jvxpctrlslazr.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item143>
+    <Item144>
+      <Name Value="KASComp"/>
+      <Version Major="1" Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/KASToolBar/kascomp.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item144>
+    <Item145>
+      <Name Value="KControlsBase"/>
+      <Version Major="1" Minor="7" Release="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/kcontrols/packages/kcontrols/kcontrolsbase.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item145>
+    <Item146>
+      <Name Value="KControlsLaz"/>
+      <Version Major="1" Minor="7" Release="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/kcontrols/packages/kcontrols/kcontrolslaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item146>
+    <Item147>
+      <Name Value="kyoukai_standard"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/kyoukai_framework/src/packages/kyoukai_standard.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:17"/>
+    </Item147>
+    <Item148>
+      <Name Value="lape"/>
+      <Version Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Lape/package/lape.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:30"/>
+    </Item148>
+    <Item149>
+      <Name Value="LazAndroidWizardPack"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LAMW/android_wizard/lazandroidwizardpack.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item149>
+    <Item150>
+      <Name Value="lazbarcodes"/>
+      <Version Major="2" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazBarcodes/packages/lazbarcodes.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item150>
+    <Item151>
+      <Name Value="lazbarcodes_runtimeonly"/>
+      <Version Major="2" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazBarcodes/packages/lazbarcodes_runtimeonly.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item151>
+    <Item152>
+      <Name Value="LazColorPalette"/>
+      <Version Minor="2" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/colorpalette/lazcolorpalette.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item152>
+    <Item153>
+      <Name Value="lazexpertsuperform"/>
+      <Version Major="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazexpertsuperform.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item153>
+    <Item154>
+      <Name Value="lazextbase"/>
+      <Version Major="1" Minor="9" Release="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextbase.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item154>
+    <Item155>
+      <Name Value="lazextbuttons"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextbuttons.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item155>
+    <Item156>
+      <Name Value="lazextcomponents"/>
+      <Version Major="2" Minor="2" Release="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextcomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item156>
+    <Item157>
+      <Name Value="lazextcomponentsimg"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextcomponentsimg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item157>
+    <Item158>
+      <Name Value="lazextcopy"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextcopy.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item158>
+    <Item159>
+      <Name Value="lazextcore"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextcore.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item159>
+    <Item160>
+      <Name Value="lazextcrypt"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextcrypt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item160>
+    <Item161>
+      <Name Value="lazextinit"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextinit.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item161>
+    <Item162>
+      <Name Value="lazextnet"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextnet.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item162>
+    <Item163>
+      <Name Value="lazextnumeric"/>
+      <Version Major="1" Minor="7" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextnumeric.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item163>
+    <Item164>
+      <Name Value="lazextreports"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextreports.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item164>
+    <Item165>
+      <Name Value="lazextspecialized"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazextspecialized.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item165>
+    <Item166>
+      <Name Value="LazGDIPlus"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/GDIPlus/packages/Lazarus/lazgdiplus.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item166>
+    <Item167>
+      <Name Value="LazLightFileStream"/>
+      <Version Major="1" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazLightFileStream/LazLightFileStream.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:40"/>
+    </Item167>
+    <Item168>
+      <Name Value="lazMapViewerPkg"/>
+      <Version Major="1" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazMapViewer/lazmapviewerpkg.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item168>
+    <Item169>
+      <Name Value="lazpasmp"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/pasmp/lazpasmp.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:41"/>
+    </Item169>
+    <Item170>
+      <Name Value="LazProfiler"/>
+      <Version Minor="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lazprofiler/LazProfiler.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:43"/>
+    </Item170>
+    <Item171>
+      <Name Value="LazQuadTree"/>
+      <Version Minor="1" Release="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazQuadTree/lazquadtree.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:45"/>
+    </Item171>
+    <Item172>
+      <Name Value="lazregisterextcomp"/>
+      <Version Major="1" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazregisterextcomp.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item172>
+    <Item173>
+      <Name Value="lazregisteribx"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazregisteribx.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item173>
+    <Item174>
+      <Name Value="lazregisterzeos"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExtendedPackages/lazregisterzeos.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item174>
+    <Item175>
+      <Name Value="LazRGBGraphics"/>
+      <Version Major="1" Minor="1" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazRGBGraphics/lazrgbgraphics.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:46"/>
+    </Item175>
+    <Item176>
+      <Name Value="lazrichview"/>
+      <Version Minor="5" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lazrichview/lazrichview.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item176>
+    <Item177>
+      <Name Value="LazSerialPort"/>
+      <Version Minor="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LazSerial/LazSerialPort.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item177>
+    <Item178>
+      <Name Value="lazupdate"/>
+      <Version Minor="3" Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lazautoupdate/lazupdate.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:35"/>
+    </Item178>
+    <Item179>
+      <Name Value="laz_acs"/>
+      <Version Major="3" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/acs/packages/laz_acs.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item179>
+    <Item180>
+      <Name Value="laz_acs_directx"/>
+      <Version Major="3" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/acs/packages/laz_acs_directx.lpk"/>
+      <LastUsed Value="2026/06/13 14:10:33"/>
+    </Item180>
+    <Item181>
+      <Name Value="laz_acs_lib"/>
+      <Version Major="3" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/acs/packages/laz_acs_lib.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item181>
+    <Item182>
+      <Name Value="laz_chemtext"/>
+      <Version Minor="1" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/chemtext/laz_chemtext.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item182>
+    <Item183>
+      <Name Value="laz_fpspreadsheet"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FPSpreadsheet/laz_fpspreadsheet.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item183>
+    <Item184>
+      <Name Value="laz_fpspreadsheetexport_visual"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FPSpreadsheet/laz_fpspreadsheetexport_visual.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item184>
+    <Item185>
+      <Name Value="laz_fpspreadsheet_crypto"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FPSpreadsheet/laz_fpspreadsheet_crypto.lpk"/>
+      <LastUsed Value="2026/06/13 14:13:44"/>
+    </Item185>
+    <Item186>
+      <Name Value="laz_fpspreadsheet_dataset"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FPSpreadsheet/laz_fpspreadsheet_dataset.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item186>
+    <Item187>
+      <Name Value="laz_fpspreadsheet_visual"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FPSpreadsheet/laz_fpspreadsheet_visual.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item187>
+    <Item188>
+      <Name Value="laz_fpspreadsheet_visual_dsgn"/>
+      <Version Major="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/FPSpreadsheet/laz_fpspreadsheet_visual_dsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item188>
+    <Item189>
+      <Name Value="laz_sortgrid"/>
+      <Version Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/sortgrid/laz_sortgrid.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item189>
+    <Item190>
+      <Name Value="laz_synapse"/>
+      <Version Major="40" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/synapse40.1/laz_synapse.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item190>
+    <Item191>
+      <Name Value="laz_systools"/>
+      <Version Major="4" Release="4" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SysTools/laz_systools.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:09"/>
+    </Item191>
+    <Item192>
+      <Name Value="laz_systoolsdb"/>
+      <Version Major="4" Release="4" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SysTools/laz_systoolsdb.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:10"/>
+    </Item192>
+    <Item193>
+      <Name Value="laz_systoolsdb_design"/>
+      <Version Major="4" Release="4" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SysTools/laz_systoolsdb_design.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:11"/>
+    </Item193>
+    <Item194>
+      <Name Value="laz_systoolswin"/>
+      <Version Major="4" Release="4" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SysTools/laz_systoolswin.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:12"/>
+    </Item194>
+    <Item195>
+      <Name Value="laz_systoolswin_design"/>
+      <Version Major="4" Release="4" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SysTools/laz_systoolswin_design.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:15"/>
+    </Item195>
+    <Item196>
+      <Name Value="laz_systools_design"/>
+      <Version Major="4" Release="4" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SysTools/laz_systools_design.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:13"/>
+    </Item196>
+    <Item197>
+      <Name Value="laz_visualplanit"/>
+      <Version Major="1" Minor="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TVPlanIt/laz_visualplanit.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item197>
+    <Item198>
+      <Name Value="laz_visualplanit_design"/>
+      <Version Major="1" Minor="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TVPlanIt/laz_visualplanit_design.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item198>
+    <Item199>
+      <Name Value="laz_visualplanit_zeos"/>
+      <Version Major="1" Minor="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TVPlanIt/laz_visualplanit_zeos.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item199>
+    <Item200>
+      <Name Value="laz_visualplanit_zeos_design"/>
+      <Version Major="1" Minor="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TVPlanIt/laz_visualplanit_zeos_design.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item200>
+    <Item201>
+      <Name Value="lclextensions_package"/>
+      <Version Minor="6" Release="1"/>
+      <Filename Value="components/lclextensions/lclextensions_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item201>
+    <Item202>
+      <Name Value="lcs_package"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lainzcodestudio-master/lcs_package/lcs_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item202>
+    <Item203>
+      <Name Value="LGenerics"/>
+      <Version Minor="5" Release="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LGenerics/lgenerics/lgenerics.lpk"/>
+      <LastUsed Value="2026/06/13 14:15:50"/>
+    </Item203>
+    <Item204>
+      <Name Value="Lists"/>
+      <Version Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Lists/lists.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item204>
+    <Item205>
+      <Name Value="lnetbase"/>
+      <Version Minor="6" Release="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lnet/lazaruspackage/lnetbase.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:23"/>
+    </Item205>
+    <Item206>
+      <Name Value="lnetvisual"/>
+      <Version Minor="6" Release="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/lnet/lazaruspackage/lnetvisual.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:25"/>
+    </Item206>
+    <Item207>
+      <Name Value="longtimerpackage"/>
+      <Version Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/longtimer/longtimerpackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item207>
+    <Item208>
+      <Name Value="lr_BarcodesEx"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LrBarcodesEx/lr_barcodesex.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item208>
+    <Item209>
+      <Name Value="luiapp_package"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luiapp/luiapp_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:34"/>
+    </Item209>
+    <Item210>
+      <Name Value="luicomponents"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luicomponents/luicomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item210>
+    <Item211>
+      <Name Value="luicontrols"/>
+      <Version Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luicontrols/luicontrols.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item211>
+    <Item212>
+      <Name Value="luilazreportcomponents"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luicomponents/luilazreportcomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item212>
+    <Item213>
+      <Name Value="LuiLCLComponents"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luicomponents/luilclcomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item213>
+    <Item214>
+      <Name Value="luimediators_package"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luimediators/luimediators_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item214>
+    <Item215>
+      <Name Value="luirest_package"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luirest/luirest_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item215>
+    <Item216>
+      <Name Value="LuiSqliteComponents"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luicomponents/luisqlitecomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item216>
+    <Item217>
+      <Name Value="LuiZeosComponents"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/luicomponents/luizeoscomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item217>
+    <Item218>
+      <Name Value="mbColorLibLaz"/>
+      <Version Major="2" Minor="2" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/MBColorLib/mbcolorliblaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item218>
+    <Item219>
+      <Name Value="MetaDarkStyle"/>
+      <Version Minor="9"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/MetaDarkStyle/metadarkstyle.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item219>
+    <Item220>
+      <Name Value="metadarkstyledsgn"/>
+      <Version Minor="9"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/MetaDarkStyle/metadarkstyledsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item220>
+    <Item221>
+      <Name Value="metadarkstyledsgn226"/>
+      <Version Minor="9"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/MetaDarkStyle/metadarkstyledsgn226.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:52"/>
+    </Item221>
+    <Item222>
+      <Name Value="miscutils_package"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/miscutils/miscutils_package.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:45"/>
+    </Item222>
+    <Item223>
+      <Name Value="mormot2"/>
+      <Version Major="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/mORMot2/packages/lazarus/mormot2.lpk"/>
+      <LastUsed Value="2026/06/13 14:31:16"/>
+    </Item223>
+    <Item224>
+      <Name Value="mormot2"/>
+      <Version Major="2" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/mORMot2/packages/lazarus/mormot2.lpk"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item224>
+    <Item225>
+      <Name Value="mormot2ui"/>
+      <Version Major="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/mORMot2/packages/lazarus/mormot2ui.lpk"/>
+      <LastUsed Value="2026/06/13 14:31:16"/>
+    </Item225>
+    <Item226>
+      <Name Value="mORMot2WebSocketComponents"/>
+      <Version Major="2" Release="7"/>
+      <Filename Value="/home/bitmasterxor/Desktop/mORMot2-WebSockets-VCL-Components-For-Delphi-And-Lazarus/mORMot2-WebSockets-VCL-Components-For-Delphi-main/LazarusPackage/mORMot2WebSocketComponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item226>
+    <Item227>
+      <Name Value="mormot_base"/>
+      <Version Major="1" Minor="18"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/mORMot/Packages/mormot_base.lpk"/>
+      <LastUsed Value="2026/06/13 14:16:53"/>
+    </Item227>
+    <Item228>
+      <Name Value="mormot_cross"/>
+      <Version Major="1" Minor="18"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/mORMot/Packages/mormot_cross.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:00"/>
+    </Item228>
+    <Item229>
+      <Name Value="MPlayerControlLaz"/>
+      <Version Minor="1" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/mplayer0.1.2/mplayercontrollaz.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:13"/>
+    </Item229>
+    <Item230>
+      <Name Value="multiloglaz"/>
+      <Version Minor="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/MultiLog/multiloglaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item230>
+    <Item231>
+      <Name Value="MultiThreadProcsLaz"/>
+      <Version Major="1" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/multithreadprocs/multithreadprocslaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item231>
+    <Item232>
+      <Name Value="myexamplepackage"/>
+      <Version Major="1" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExamplePackage/myexamplepackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item232>
+    <Item233>
+      <Name Value="NiceChartLaz"/>
+      <Version Major="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/NiceChart/packages/Lazarus/nicechartlaz.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:16"/>
+    </Item233>
+    <Item234>
+      <Name Value="NiceGridLaz"/>
+      <Version Major="3" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/NiceGrid/packages/Lazarus/NiceGridLaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item234>
+    <Item235>
+      <Name Value="NiceSidebarLaz"/>
+      <Version Major="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/nicesidebar/packages/Lazarus/nicesidebarlaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item235>
+    <Item236>
+      <Name Value="NotepadPPPlugin"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/NotepadppPlugin/notepadppplugin.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:19"/>
+    </Item236>
+    <Item237>
+      <Name Value="NumCPULib4PascalPackage"/>
+      <Version Major="1" Minor="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/NumCPULib/src/Packages/FPC/NumCPULib4PascalPackage.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:20"/>
+    </Item237>
+    <Item238>
+      <Name Value="oauth2_laz"/>
+      <Version Major="1" Release="1" Build="26"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/OAuth2Client/oauth2_laz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item238>
+    <Item239>
+      <Name Value="opengpsx"/>
+      <Version Minor="3" Release="23" Build="1001"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/opengpsx/opengpsx.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item239>
+    <Item240>
+      <Name Value="Orpheus"/>
+      <Version Minor="3" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Orpheus/orpheus.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item240>
+    <Item241>
+      <Name Value="pack_powerpdf"/>
+      <Version Minor="9" Release="17" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PowerPDF/pack_powerpdf.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item241>
+    <Item242>
+      <Name Value="PascalContainer"/>
+      <Version Minor="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalContainer/packages/pascalcontainer.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:32"/>
+    </Item242>
+    <Item243>
+      <Name Value="pascalscada"/>
+      <Version Minor="7" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalSCADA/pascalscada.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item243>
+    <Item244>
+      <Name Value="pascalscada_common"/>
+      <Version Minor="7" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalSCADA/pascalscada_common.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item244>
+    <Item245>
+      <Name Value="pascalscada_db"/>
+      <Version Minor="7" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalSCADA/pascalscada_db.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item245>
+    <Item246>
+      <Name Value="pascalscada_dsng"/>
+      <Version Minor="7" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalSCADA/pascalscada_dsng.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item246>
+    <Item247>
+      <Name Value="pascalscada_full"/>
+      <Version Minor="7" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalSCADA/pascalscada_full.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item247>
+    <Item248>
+      <Name Value="pascalscada_hmi"/>
+      <Version Minor="7" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalSCADA/pascalscada_hmi.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item248>
+    <Item249>
+      <Name Value="PascalTZ"/>
+      <Version Major="2" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PascalTZ/package/pascaltz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item249>
+    <Item250>
+      <Name Value="pckSQLdbConn"/>
+      <Version Major="2" Minor="32"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/UserControl/package/connectors/UCSQLdbConn/pcksqldbconn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item250>
+    <Item251>
+      <Name Value="pckUCDataConnector"/>
+      <Version Major="2" Minor="32"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/UserControl/package/lazarus/pckUCDataConnector.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item251>
+    <Item252>
+      <Name Value="pckUserControlDesign"/>
+      <Version Major="2" Minor="33"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/UserControl/package/lazarus/pckUserControlDesign.lpk"/>
+      <LastUsed Value="2026/06/13 14:20:46"/>
+    </Item252>
+    <Item253>
+      <Name Value="pckUserControlRuntime"/>
+      <Version Major="2" Minor="33"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/UserControl/package/lazarus/pckUserControlRuntime.lpk"/>
+      <LastUsed Value="2026/06/13 14:20:37"/>
+    </Item253>
+    <Item254>
+      <Name Value="pckZeosConn"/>
+      <Version Major="2" Minor="32"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/UserControl/package/connectors/UCZeosConn/pckZeosConn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item254>
+    <Item255>
+      <Name Value="pkg_gifanim"/>
+      <Version Major="1" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/gifanim/pkg_gifanim.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item255>
+    <Item256>
+      <Name Value="pkg_gifanim_dsgn"/>
+      <Version Major="1" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/gifanim/pkg_gifanim_dsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item256>
+    <Item257>
+      <Name Value="pkSalesSwitch"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TSalesSwitch/pksalesswitch.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item257>
+    <Item258>
+      <Name Value="playwavepackage"/>
+      <Version Release="10"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PlaySoundPackage/latest_stable/playwavepackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item258>
+    <Item259>
+      <Name Value="plot"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/plotpanel-lazarus-0.97.1/plot.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item259>
+    <Item260>
+      <Name Value="pl_0_libs"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_0_libs/pl_0_libs.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item260>
+    <Item261>
+      <Name Value="pl_APElib"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_apelib/pl_apelib.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item261>
+    <Item262>
+      <Name Value="pl_asiovst"/>
+      <Version Major="6" Minor="8" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_asiovst/pl_asiovst.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:46"/>
+    </Item262>
+    <Item263>
+      <Name Value="pl_Cindy"/>
+      <Version Major="6" Minor="8" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_cindy/pl_cindy.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item263>
+    <Item264>
+      <Name Value="pl_ExCompress"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_excompress/pl_excompress.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item264>
+    <Item265>
+      <Name Value="pl_ExControls"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_excontrols/pl_excontrols.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:52"/>
+    </Item265>
+    <Item266>
+      <Name Value="pl_ExDatabase"/>
+      <Version Major="6" Minor="4" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_exdatabase/pl_exdatabase.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item266>
+    <Item267>
+      <Name Value="pl_Graphics32"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_graphics32/pl_graphics32.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:55"/>
+    </Item267>
+    <Item268>
+      <Name Value="pl_Graphics32EXT"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_graphics32ext/pl_graphics32ext.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:57"/>
+    </Item268>
+    <Item269>
+      <Name Value="pl_Graphics32Magic"/>
+      <Version Major="6" Minor="7" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_graphics32magic/pl_graphics32magic.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:59"/>
+    </Item269>
+    <Item270>
+      <Name Value="pl_Graphics32MG"/>
+      <Version Major="7" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_graphics32mg/pl_graphics32mg.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:00"/>
+    </Item270>
+    <Item271>
+      <Name Value="pl_Graphics32VPR"/>
+      <Version Major="7" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_graphics32vpr/pl_graphics32vpr.lpk"/>
+      <LastUsed Value="2026/06/13 14:17:58"/>
+    </Item271>
+    <Item272>
+      <Name Value="pl_Html5Canvas"/>
+      <Version Major="7" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_html5canvas/pl_html5canvas.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:01"/>
+    </Item272>
+    <Item273>
+      <Name Value="pl_LockBox"/>
+      <Version Major="6" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_lockbox/pl_lockbox.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item273>
+    <Item274>
+      <Name Value="pl_OpenGL"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_opengl/pl_opengl.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:04"/>
+    </Item274>
+    <Item275>
+      <Name Value="pl_OpenGLES"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_opengles/pl_opengles.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item275>
+    <Item276>
+      <Name Value="pl_Pappe"/>
+      <Version Major="6" Minor="3" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_pappe/pl_pappe.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item276>
+    <Item277>
+      <Name Value="pl_SDL2"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_sdl2/pl_sdl2.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item277>
+    <Item278>
+      <Name Value="pl_SynapseVS"/>
+      <Version Major="6" Minor="7" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_synapsevs/pl_synapsevs.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item278>
+    <Item279>
+      <Name Value="pl_USB"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_usb/pl_usb.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item279>
+    <Item280>
+      <Name Value="pl_Vulkan"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_vulkan/pl_vulkan.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item280>
+    <Item281>
+      <Name Value="pl_Win_API"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_api/pl_win_api.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:13"/>
+    </Item281>
+    <Item282>
+      <Name Value="pl_Win_DirectX"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_directx/pl_win_directx.lpk"/>
+      <LastUsed Value="2026/06/13 14:10:32"/>
+    </Item282>
+    <Item283>
+      <Name Value="pl_Win_DirectX11"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_directx11/pl_win_directx11.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:14"/>
+    </Item283>
+    <Item284>
+      <Name Value="pl_Win_DirectX12"/>
+      <Version Major="7" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_directx12/pl_win_directx12.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:14"/>
+    </Item284>
+    <Item285>
+      <Name Value="pl_Win_DirectXUT"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_directxut/pl_win_directxut.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:15"/>
+    </Item285>
+    <Item286>
+      <Name Value="pl_Win_DSPack"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_dspack/pl_win_dspack.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:16"/>
+    </Item286>
+    <Item287>
+      <Name Value="pl_Win_GDI"/>
+      <Version Major="6" Minor="9" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_gdi/pl_win_gdi.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:17"/>
+    </Item287>
+    <Item288>
+      <Name Value="pl_Win_Media"/>
+      <Version Major="7" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_media/pl_win_media.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:18"/>
+    </Item288>
+    <Item289>
+      <Name Value="pl_Win_Midi"/>
+      <Version Major="7" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ct4laz/pl_components/pl_win_midi/pl_win_midi.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:18"/>
+    </Item289>
+    <Item290>
+      <Name Value="poweredby"/>
+      <Version Major="1" Release="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/poweredby/poweredby.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item290>
+    <Item291>
+      <Name Value="projectmetrics"/>
+      <Version Major="1" Minor="1" Build="38"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ProjectMetrics/src/projectmetrics.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item291>
+    <Item292>
+      <Name Value="python4lazarus_package"/>
+      <Version Major="1" Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/PythonForLazarus/python4lazarus/python4lazarus_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item292>
+    <Item293>
+      <Name Value="QRCodeGenLib4PascalPackage"/>
+      <Version Major="1" Minor="9"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/QRCodeGenLib/QRCodeGenLib/src/Packages/FPC/QRCodeGenLib4PascalPackage.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:24"/>
+    </Item293>
+    <Item294>
+      <Name Value="ray4laz"/>
+      <Version Major="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Ray4Laz/package/ray4laz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item294>
+    <Item295>
+      <Name Value="ray4laz_designtime"/>
+      <Version Major="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Ray4Laz/package/ray4laz_designtime.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item295>
+    <Item296>
+      <Name Value="regvirtualdbtreeexlaz"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/virtualdbtreeex/lazarus/regvirtualdbtreeexlaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item296>
+    <Item297>
+      <Name Value="restdatawarecomponents"/>
+      <Version Major="2" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/RESTDataware/CORE/Packages/Lazarus/restdatawarecomponents.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item297>
+    <Item298>
+      <Name Value="RestDatawareIndySockets"/>
+      <Version Major="2" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/RESTDataware/CORE/Packages/Lazarus/Connectors/Indy/RestDatawareIndySockets.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item298>
+    <Item299>
+      <Name Value="RestDatawareShellservices"/>
+      <Version Major="2" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/RESTDataware/CORE/Packages/Lazarus/ShellTools/restdatawareshellservices.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item299>
+    <Item300>
+      <Name Value="RESTDWDriverZEOS"/>
+      <Version Major="2" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/RESTDataware/CORE/Packages/Lazarus/Drivers/zeos/restdwdriverzeos.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item300>
+    <Item301>
+      <Name Value="RESTDWLazDriver"/>
+      <Version Major="2" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/RESTDataware/CORE/Packages/Lazarus/Drivers/lazdriver/restdwlazdriver.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item301>
+    <Item302>
+      <Name Value="rhl_package"/>
+      <Version Major="16" Minor="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rhl/rhl_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item302>
+    <Item303>
+      <Name Value="rhspack"/>
+      <Version Major="1" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/RhsPack/rhspack.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item303>
+    <Item304>
+      <Name Value="richmemopackage"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/richmemo/richmemopackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item304>
+    <Item305>
+      <Name Value="richmemo_design"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/richmemo/ide/richmemo_design.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item305>
+    <Item306>
+      <Name Value="ringwatch"/>
+      <Version Minor="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ringwatch/ringwatch.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item306>
+    <Item307>
+      <Name Value="rx"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rx.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item307>
+    <Item308>
+      <Name Value="rxdbgrid_export_spreadsheet"/>
+      <Version Major="1" Release="1" Build="6"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rxdbgrid_export_spreadsheet.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item308>
+    <Item309>
+      <Name Value="rxdbgrid_print"/>
+      <Version Major="1" Minor="1" Release="2" Build="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rxdbgrid_print.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item309>
+    <Item310>
+      <Name Value="rxnew"/>
+      <Version Major="3" Minor="4" Release="1" Build="235"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rxnew.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item310>
+    <Item311>
+      <Name Value="rxtools"/>
+      <Version Minor="6" Build="12"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rxtools.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item311>
+    <Item312>
+      <Name Value="rx_LazReport"/>
+      <Version Major="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/LazReport/rx_lazreport.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item312>
+    <Item313>
+      <Name Value="rx_sort_sqldb"/>
+      <Version Major="1" Minor="1" Release="2" Build="3"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rx_sort_sqldb.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item313>
+    <Item314>
+      <Name Value="rx_sort_zeos"/>
+      <Version Major="1" Minor="1" Release="1" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Rx/rx_sort_zeos.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item314>
+    <Item315>
+      <Name Value="sak"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/sak/sak/sak_lcl/src/sak.lpk"/>
+      <LastUsed Value="2026/06/13 14:18:56"/>
+    </Item315>
+    <Item316>
+      <Name Value="scrolltext"/>
+      <Version Major="1" Minor="1" Release="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/scrolltext/scrolltext.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item316>
+    <Item317>
+      <Name Value="SdpoDSMLaz"/>
+      <Version Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Sdpo/SdpoDSM/sdpodsmlaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item317>
+    <Item318>
+      <Name Value="SdpoDynmatrix"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Sdpo/SdpoDynmatrix/sdpodynmatrix.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item318>
+    <Item319>
+      <Name Value="SdpoFastFormLaz"/>
+      <Version Minor="1" Release="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Sdpo/SdpoFastForm/sdpofastformlaz.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:00"/>
+    </Item319>
+    <Item320>
+      <Name Value="SdpoJoystickLaz"/>
+      <Version Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Sdpo/SdpoJoystick/sdpojoysticklaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item320>
+    <Item321>
+      <Name Value="SdpoSerialLaz"/>
+      <Version Minor="1" Release="5"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/Sdpo/SdpoSerial/sdposeriallaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item321>
+    <Item322>
+      <Name Value="SemaphorGridLPK"/>
+      <Version Major="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/grid_semaphor/semaphorgridlpk.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item322>
+    <Item323>
+      <Name Value="SimpleBaseLib4PascalPackage"/>
+      <Version Major="2" Minor="7"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SimpleBaseLib/SimpleBaseLib/src/Packages/FPC/SimpleBaseLib4PascalPackage.lpk"/>
+      <LastUsed Value="2026/06/13 14:11:38"/>
+    </Item323>
+    <Item324>
+      <Name Value="SlimRWLock"/>
+      <Version Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SlimRWLock/slimrwlock.lpk"/>
+      <LastUsed Value="2026/06/13 14:19:02"/>
+    </Item324>
+    <Item325>
+      <Name Value="smnetgradientlaz"/>
+      <Version Major="2" Minor="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SMNetGradient/smnetgradientlaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item325>
+    <Item326>
+      <Name Value="SpkToolbarPackage"/>
+      <Version Minor="1" Release="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SpkToolBar/spktoolbarpackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item326>
+    <Item327>
+      <Name Value="splashabout"/>
+      <Version Major="1" Minor="4" Release="3" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/splashabout/splashabout.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item327>
+    <Item328>
+      <Name Value="sqliteextensions_package"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/sqlite/extensions/sqliteextensions_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item328>
+    <Item329>
+      <Name Value="Stax"/>
+      <Version Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/fpStax/Stax-package/Stax.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item329>
+    <Item330>
+      <Name Value="strbuf_package"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/luipack/miscutils/strbuf_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item330>
+    <Item331>
+      <Name Value="subcomponent"/>
+      <Version Major="1" Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ExamplePackage/subcomponent.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item331>
+    <Item332>
+      <Name Value="synfacilsyn"/>
+      <Version Major="1" Minor="2" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/SynFacilSyn 1.21/synfacilsyn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item332>
+    <Item333>
+      <Name Value="TaurusTLSLDsgn"/>
+      <Version Major="1" Release="8" Build="49"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TaurusTLS/Packages/lazarus/taurustlsldsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item333>
+    <Item334>
+      <Name Value="TaurusTLSRT"/>
+      <Version Major="1" Release="8" Build="49"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TaurusTLS/Packages/lazarus/taurustlsrt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item334>
+    <Item335>
+      <Name Value="TDI"/>
+      <Version Minor="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TDINoteBook/tdi.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item335>
+    <Item336>
+      <Name Value="tfpandroidbridge_pack"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/LAMW/android_bridges/tfpandroidbridge_pack.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item336>
+    <Item337>
+      <Name Value="Threading"/>
+      <Version Major="1" Build="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wthread/threading.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item337>
+    <Item338>
+      <Name Value="tmoon_laz"/>
+      <Version Major="2" Minor="1" Release="2"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/delphimoon/packages/Lazarus/tmoon_laz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item338>
+    <Item339>
+      <Name Value="tponguard"/>
+      <Version Major="1" Minor="20" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/OnGuard/packages/tponguard.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item339>
+    <Item340>
+      <Name Value="tponguard_design"/>
+      <Version Major="1" Minor="20" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/OnGuard/packages/tponguard_design.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item340>
+    <Item341>
+      <Name Value="twilio"/>
+      <Version Minor="4"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TwilioLib/twilio.lpk"/>
+      <LastUsed Value="2026/06/13 14:20:30"/>
+    </Item341>
+    <Item342>
+      <Name Value="uEControls"/>
+      <Version Major="6" Minor="1" Release="1" Build="315"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/uecontrols-master/uecontrols.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item342>
+    <Item343>
+      <Name Value="uGraphDSGN"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/EvsSimpleGraph/Package/ugraphdsgn.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item343>
+    <Item344>
+      <Name Value="uGraphRTM"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/EvsSimpleGraph/Package/ugraphrtm.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item344>
+    <Item345>
+      <Name Value="uniqueinstance_package"/>
+      <Version Major="1" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/uniqueinstance/uniqueinstance_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item345>
+    <Item346>
+      <Name Value="utf8tools"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/UTF8Tools/utf8tools.lpk"/>
+      <LastUsed Value="2026/06/13 14:20:56"/>
+    </Item346>
+    <Item347>
+      <Name Value="VampyreImagingPackage"/>
+      <Version Minor="80"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/VampyreImaging/Packages/VampyreImagingPackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item347>
+    <Item348>
+      <Name Value="VampyreImagingPackageExt"/>
+      <Version Minor="80"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/VampyreImaging/Packages/VampyreImagingPackageExt.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item348>
+    <Item349>
+      <Name Value="viewerpackage"/>
+      <Version Major="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/TextViewer/textviewer/viewerpackage.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item349>
+    <Item350>
+      <Name Value="virtualdbgrid_package"/>
+      <Version Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/virtualdbgrid/virtualdbgrid_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item350>
+    <Item351>
+      <Name Value="virtualdbtreeexlaz"/>
+      <Version Major="1" Minor="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/virtualdbtreeex/lazarus/virtualdbtreeexlaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item351>
+    <Item352>
+      <Name Value="virtualtreeview_package"/>
+      <Version Major="5" Minor="5" Release="3" Build="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/VirtualTreeViewV5/Source/virtualtreeview_package.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item352>
+    <Item353>
+      <Name Value="WebView4Delphi"/>
+      <Version Major="1" Release="1823" Build="32"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/WebView4Delphi/packages/webview4delphi.lpk"/>
+      <LastUsed Value="2026/06/13 14:21:07"/>
+    </Item353>
+    <Item354>
+      <Name Value="WIAPascal_pkg"/>
+      <Version Major="1" Release="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/WIAPascal/WIAPascal_pkg.lpk"/>
+      <LastUsed Value="2026/06/13 14:21:08"/>
+    </Item354>
+    <Item355>
+      <Name Value="wst_core"/>
+      <Version Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wst/ide/lazarus/wst_core.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item355>
+    <Item356>
+      <Name Value="wst_design"/>
+      <Version Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wst/ide/lazarus/wst_design.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item356>
+    <Item357>
+      <Name Value="wst_fcltransport"/>
+      <Version Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wst/ide/lazarus/wst_fcltransport.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item357>
+    <Item358>
+      <Name Value="wst_indy"/>
+      <Version Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wst/ide/lazarus/wst_indy.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item358>
+    <Item359>
+      <Name Value="wst_synapse"/>
+      <Version Minor="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/wst/ide/lazarus/wst_synapse.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item359>
+    <Item360>
+      <Name Value="XMailerPkg"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/xmailer-master/pkg/xmailerpkg.lpk"/>
+      <LastUsed Value="2026/06/13 14:21:21"/>
+    </Item360>
+    <Item361>
+      <Name Value="xmlstreaming"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/XMLStreaming/xmlstreaming.lpk"/>
+      <LastUsed Value="2026/06/13 14:21:22"/>
+    </Item361>
+    <Item362>
+      <Name Value="zcomponent"/>
+      <Version Major="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zeosdbo/packages/lazarus/zcomponent.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item362>
+    <Item363>
+      <Name Value="zcomponentdesign"/>
+      <Version Major="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zeosdbo/packages/lazarus/zcomponentdesign.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item363>
+    <Item364>
+      <Name Value="zcore"/>
+      <Version Major="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zeosdbo/packages/lazarus/zcore.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item364>
+    <Item365>
+      <Name Value="zdbc"/>
+      <Version Major="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zeosdbo/packages/lazarus/zdbc.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item365>
+    <Item366>
+      <Name Value="zfmsdk"/>
+      <Version Major="1"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zfmsdk/zfmsdk.lpk"/>
+      <LastUsed Value="2026/06/13 14:21:24"/>
+    </Item366>
+    <Item367>
+      <Name Value="zmsql"/>
+      <Version Minor="1" Release="22"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zmsql/zmsql.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item367>
+    <Item368>
+      <Name Value="zparsesql"/>
+      <Version Major="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zeosdbo/packages/lazarus/zparsesql.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item368>
+    <Item369>
+      <Name Value="zplain"/>
+      <Version Major="8"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/zeosdbo/packages/lazarus/zplain.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item369>
+    <Item370>
+      <Name Value="zrptlaz"/>
+      <Version Major="2" Release="12"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ZReport/source/zrptlaz.lpk"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item370>
+    <Item371>
+      <Name Value="zrptlaz_dsg"/>
+      <Version Major="2" Release="12"/>
+      <Filename Value="/home/bitmasterxor/.lazarus/onlinepackagemanager/packages/ZReport/source/zrptlaz_dsg.lpk"/>
+      <LastUsed Value="2026/06/13 14:21:29"/>
+    </Item371>
+  </UserPkgLinks>
+  <GlobalPkgLinks Version="3" Count="73">
+    <Item1>
+      <Name Value="anchordocking"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item1>
+    <Item2>
+      <Name Value="anchordockingdsgn"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item2>
+    <Item3>
+      <Name Value="buildintf"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item3>
+    <Item4>
+      <Name Value="cairocanvas_pkg"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item4>
+    <Item5>
+      <Name Value="charactermappkg"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item5>
+    <Item6>
+      <Name Value="charactermap_ide_pkg"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item6>
+    <Item7>
+      <Name Value="chmhelppkg"/>
+      <Version Minor="2" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item7>
+    <Item8>
+      <Name Value="cmdlinedebuggerbase"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item8>
+    <Item9>
+      <Name Value="codetools"/>
+      <Version Major="1" Release="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item9>
+    <Item10>
+      <Name Value="datetimectrls"/>
+      <Version Major="1" Minor="5" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item10>
+    <Item11>
+      <Name Value="datetimectrlsdsgn"/>
+      <Version Major="1" Minor="5" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item11>
+    <Item12>
+      <Name Value="dbflaz"/>
+      <Version Minor="1" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item12>
+    <Item13>
+      <Name Value="debuggerintf"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item13>
+    <Item14>
+      <Name Value="dockedformeditor"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item14>
+    <Item15>
+      <Name Value="editormacroscript"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item15>
+    <Item16>
+      <Name Value="exampleprojects"/>
+      <Version Minor="8"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item16>
+    <Item17>
+      <Name Value="externhelp"/>
+      <Version Major="1" Minor="3"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item17>
+    <Item18>
+      <Name Value="fcl"/>
+      <Version Major="1" Release="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item18>
+    <Item19>
+      <Name Value="fpcunitide"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item19>
+    <Item20>
+      <Name Value="fpdebug"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item20>
+    <Item21>
+      <Name Value="freetypelaz"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item21>
+    <Item22>
+      <Name Value="ideconfig"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item22>
+    <Item23>
+      <Name Value="idedebugger"/>
+      <Version Release="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item23>
+    <Item24>
+      <Name Value="ideintf"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item24>
+    <Item25>
+      <Name Value="idepackager"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item25>
+    <Item26>
+      <Name Value="ideproject"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item26>
+    <Item27>
+      <Name Value="ideutilspkg"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item27>
+    <Item28>
+      <Name Value="imagesforlazarus"/>
+      <Version Major="1" Release="1"/>
+      <LastUsed Value="2026/06/13 14:13:55"/>
+    </Item28>
+    <Item29>
+      <Name Value="instantfpclaz"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item29>
+    <Item30>
+      <Name Value="jcfbase"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item30>
+    <Item31>
+      <Name Value="jcfidelazarus"/>
+      <Version Major="2"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item31>
+    <Item32>
+      <Name Value="laz.virtualtreeview_package"/>
+      <Version Major="5" Minor="5" Release="3" Build="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item32>
+    <Item33>
+      <Name Value="lazcontroldsgn"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item33>
+    <Item34>
+      <Name Value="lazcontrols"/>
+      <Version Major="1" Release="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item34>
+    <Item35>
+      <Name Value="lazcustforms"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item35>
+    <Item36>
+      <Name Value="lazdbexport"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item36>
+    <Item37>
+      <Name Value="lazdebuggerfp"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item37>
+    <Item38>
+      <Name Value="lazdebuggerfpgdbmi"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item38>
+    <Item39>
+      <Name Value="lazdebuggerfplldb"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item39>
+    <Item40>
+      <Name Value="lazdebuggergdbmi"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item40>
+    <Item41>
+      <Name Value="lazdebuggerintf"/>
+      <Version Release="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item41>
+    <Item42>
+      <Name Value="lazdebuggerlldb"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item42>
+    <Item43>
+      <Name Value="lazedit"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item43>
+    <Item44>
+      <Name Value="lazmouseandkeyinput"/>
+      <Version Minor="9"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item44>
+    <Item45>
+      <Name Value="lazopenglcontext"/>
+      <Version Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item45>
+    <Item46>
+      <Name Value="lazprojectgroups"/>
+      <Version Minor="7"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item46>
+    <Item47>
+      <Name Value="lazreport"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item47>
+    <Item48>
+      <Name Value="laztestinsight"/>
+      <LastUsed Value="2026/06/19 09:05:48"/>
+    </Item48>
+    <Item49>
+      <Name Value="lazutils"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item49>
+    <Item50>
+      <Name Value="lcl"/>
+      <Version Major="4" Minor="8"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item50>
+    <Item51>
+      <Name Value="lclbase"/>
+      <Version Major="4" Minor="8"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item51>
+    <Item52>
+      <Name Value="lclextensions_package"/>
+      <Version Minor="6" Release="1"/>
+      <LastUsed Value="2026/06/13 13:17:26"/>
+    </Item52>
+    <Item53>
+      <Name Value="leakview"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item53>
+    <Item54>
+      <Name Value="lhelpcontrolpkg"/>
+      <Version Minor="2"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item54>
+    <Item55>
+      <Name Value="lr_dialogdesign"/>
+      <Version Minor="3" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item55>
+    <Item56>
+      <Name Value="memdslaz"/>
+      <Version Major="1" Minor="2" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item56>
+    <Item57>
+      <Name Value="onlinepackagemanager"/>
+      <Version Major="1" Release="1" Build="2"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item57>
+    <Item58>
+      <Name Value="pas2jsdsgn"/>
+      <Version Major="1" Release="2"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item58>
+    <Item59>
+      <Name Value="pascalscript"/>
+      <Version Build="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item59>
+    <Item60>
+      <Name Value="printer4lazarus"/>
+      <Version Minor="5"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item60>
+    <Item61>
+      <Name Value="printers4lazide"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item61>
+    <Item62>
+      <Name Value="projtemplates"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item62>
+    <Item63>
+      <Name Value="runtimetypeinfocontrols"/>
+      <Version Minor="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item63>
+    <Item64>
+      <Name Value="sdflaz"/>
+      <Version Minor="1" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item64>
+    <Item65>
+      <Name Value="simplewebservergui"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item65>
+    <Item66>
+      <Name Value="sqldblaz"/>
+      <Version Major="1" Release="2"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item66>
+    <Item67>
+      <Name Value="synedit"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:45:17"/>
+    </Item67>
+    <Item68>
+      <Name Value="syneditdsgn"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item68>
+    <Item69>
+      <Name Value="tachartlazaruspkg"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item69>
+    <Item70>
+      <Name Value="todolistlaz"/>
+      <Version Major="1" Release="3"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item70>
+    <Item71>
+      <Name Value="turbopoweripro"/>
+      <Version Major="1"/>
+      <LastUsed Value="2026/06/19 09:05:49"/>
+    </Item71>
+    <Item72>
+      <Name Value="turbopoweriprodsgn"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item72>
+    <Item73>
+      <Name Value="weblaz"/>
+      <Version Major="1" Release="1"/>
+      <LastUsed Value="2026/06/19 09:05:51"/>
+    </Item73>
+  </GlobalPkgLinks>
+</CONFIG>

@@ -33,8 +33,7 @@ package mORMot2WebSocketComponents;
 requires
   rtl,
   vcl,
-  designide,
-  MorMotComponents;
+  designide;
 
 contains
   mORMot2.WebSocket.Client in 'source\mORMot2.WebSocket.Client.pas',
