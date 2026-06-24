@@ -161,11 +161,13 @@ type
     fClientLock: TCriticalSection;
     fServerState: TWebSocketServerState;
 
-    // ENCRYPTION PROPERTIES - SAME AS CLIENT!
     fEncryptionEnabled: boolean;
     fEncryptionKey: string;
     fEncryptionMode: TAESMode;
     fEncryptionKeySize: TAESKeySize;
+    fCryptoLock:  TCriticalSection;
+    fDerivedKey:  THash256;
+    fKeyDerived:  Boolean;
 
     // ALL ADDITIONAL PROPERTIES FROM OLD SERVER
     fConnectionTimeout: Integer;
@@ -207,8 +209,6 @@ type
     procedure SetServerState(NewState: TWebSocketServerState);
     procedure SetClientState(ClientID: Integer; NewState: TWebSocketClientState);
     function GetEncryptionInfo: string;
-
-    // FIXED: Add encryption methods matching client exactly
     function EncryptData(const Data: TBytes; const ClientIP: string): TBytes;
     function DecryptData(const Data: TBytes; const ClientIP: string): TBytes;
 
@@ -248,6 +248,7 @@ type
     procedure InternalStop;
     procedure InitializeDefaults;
     procedure UpdateStatistics;
+    procedure DeriveEncryptionKey;
 
   public
     constructor Create(AOwner: TComponent); override;
@@ -407,15 +408,10 @@ begin
           // FIXED: Fire OnDataReceived FIRST for statistics (with raw encrypted data)
           fOwnerServer.OnInternalDataReceived(ClientID, rawBytes);
 
-          // FIXED: Now decrypt the data for command processing
           decryptedBytes := rawBytes;
-          if fOwnerServer.fEncryptionEnabled and
-            (fOwnerServer.fEncryptionKey <> '') then
-          begin
-            // Get the stored client IP for decryption
+          if fOwnerServer.fEncryptionEnabled then
             decryptedBytes := fOwnerServer.DecryptData(rawBytes,
               fOwnerServer.fServer.GetStoredClientIP(ClientID));
-          end;
 
           // FIXED: Fire OnHandleCommand for actual data processing (with decrypted data)
           if Assigned(fOwnerServer.fOnHandleCommand) then
@@ -444,9 +440,8 @@ begin
   fClientIPMap := TDictionary<Integer, string>.Create;
   fMapLock := TCriticalSection.Create;
 
-  // Call the parent constructor properly
   inherited Create(aPort, OnStart, OnStop, aProcessName, ServerThreadPoolCount,
-    aWebSocketsURI, aWebSocketsEncryptionKey, aWebSocketsAjax, ProcessOptions);
+    aWebSocketsURI, aWebSocketsEncryptionKey, aWebSocketsAjax, ProcessOptions, nil);
 
   // Set our custom process class to expose the connection
   ProcessClass := TCustomWebSocketAsyncProcess;
@@ -472,7 +467,7 @@ begin
     // Method 1: Direct RemoteIP property (ONLY reliable method in mORMot2)
     if Connection.RemoteIP <> '' then
     begin
-      Result := Connection.RemoteIP;
+      Result := Utf8ToString(Connection.RemoteIP);
       Exit;
     end;
 
@@ -711,8 +706,9 @@ begin
   inherited Create(AOwner);
 
   fClientInfoMap := TDictionary<Integer, TClientConnectionInfo>.Create;
-  fClientLock := TCriticalSection.Create;
-  fServerState := ssIdle;
+  fClientLock    := TCriticalSection.Create;
+  fCryptoLock    := TCriticalSection.Create;
+  fServerState   := ssIdle;
 
   InitializeDefaults;
 end;
@@ -730,9 +726,11 @@ begin
   fWebSocketsURI := 'websocket';
   fWebSocketsAjax := True;
   fEncryptionEnabled := False;
-  fEncryptionKey := '';
-  fEncryptionMode := amCBC;
+  fEncryptionKey     := '';
+  fEncryptionMode    := amCBC;
   fEncryptionKeySize := aks256;
+  fKeyDerived        := False;
+  FillChar(fDerivedKey, SizeOf(fDerivedKey), 0);
 
   // ALL ADDITIONAL DEFAULTS FROM OLD SERVER
   fConnectionTimeout := 10;
@@ -766,9 +764,10 @@ begin
 
     FreeAndNil(fClientInfoMap);
     FreeAndNil(fClientLock);
+    FillChar(fDerivedKey, SizeOf(fDerivedKey), 0);
+    FreeAndNil(fCryptoLock);
     fServer := nil;
   except
-    // Ignore cleanup errors
   end;
   inherited Destroy;
 end;
@@ -980,9 +979,18 @@ begin
   fTotalActiveConnections := fClientCount;
 end;
 
-// =============================================================================
-// ENCRYPTION METHODS MATCHING CLIENT EXACTLY
-// =============================================================================
+procedure TmORMot2WebSocketServer.DeriveEncryptionKey;
+var
+  Password, Salt: RawByteString;
+begin
+  FillChar(fDerivedKey, SizeOf(fDerivedKey), 0);
+  fKeyDerived := False;
+  if fEncryptionKey = '' then Exit;
+  Password := ToUtf8(fEncryptionKey);
+  Salt     := ToUtf8(fEncryptionKey + '_mormot2_ws_salt');
+  Pbkdf2HmacSha256(Password, Salt, 1024, fDerivedKey);
+  fKeyDerived := True;
+end;
 
 function TmORMot2WebSocketServer.GetEncryptionInfo: string;
 const
@@ -1002,250 +1010,131 @@ end;
 function TmORMot2WebSocketServer.EncryptData(const Data: TBytes;
   const ClientIP: string): TBytes;
 var
+  DKey:    THash256;
+  Mode:    TAESMode;
+  KSize:   TAESKeySize;
+  KSBits:  Integer;
   DataStr: RawByteString;
-  Password: RawByteString;
-  KeyBytes: THash256;
-  AES: TAesAbstract;
-  KeySizeBits: Integer;
-  Salt: RawByteString;
-  Header: array [0 .. ENCRYPTION_HEADER_SIZE - 1] of Byte;
-  EncryptedData: RawByteString;
-  FinalResult: TBytes;
-  SaltHost: string;
+  EncStr:  RawByteString;
+  AES:     TAesAbstract;
+  Header:  array[0..ENCRYPTION_HEADER_SIZE-1] of Byte;
+  Final:   TBytes;
 begin
-  Result := Data; // Default to original data
-
-  if not fEncryptionEnabled or (fEncryptionKey = '') then
-    Exit;
-
+  Result := Data;
+  if not fEncryptionEnabled then Exit;
+  fCryptoLock.Enter;
   try
-    // Convert TBytes to RawByteString
-    SetLength(DataStr, Length(Data));
-    if Length(Data) > 0 then
-      Move(Data[0], DataStr[1], Length(Data));
-
-    // Determine key size bits
-    case fEncryptionKeySize of
-      aks128:
-        KeySizeBits := 128;
-      aks192:
-        KeySizeBits := 192;
-      aks256:
-        KeySizeBits := 256;
-    else
-      KeySizeBits := 256;
-    end;
-
-    // FIXED: Convert server's detected IP back to what client used
-    if ClientIP = '127.0.0.1' then
-      SaltHost := 'localhost'  // Client used 'localhost' to connect
-    else
-      SaltHost := ClientIP;    // For other IPs, use as-is
-
-    // FIXED: Use SAME salt derivation as client
-    Password := ToUtf8(fEncryptionKey);
-    Salt := ToUtf8(fEncryptionKey + '_hardcoded_salt_2024');
-    Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
-
-    try
-      // Create AES instance based on mode
-      case fEncryptionMode of
-        amECB:
-          AES := TAesEcb.Create(KeyBytes, KeySizeBits);
-        amCBC:
-          AES := TAesCbc.Create(KeyBytes, KeySizeBits);
-        amCFB:
-          AES := TAesCfb.Create(KeyBytes, KeySizeBits);
-        amOFB:
-          AES := TAesOfb.Create(KeyBytes, KeySizeBits);
-        amCTR:
-          AES := TAesCtr.Create(KeyBytes, KeySizeBits);
-        amGCM:
-          AES := TAesGcm.Create(KeyBytes, KeySizeBits);
-        amCFC:
-          AES := TAesCfc.Create(KeyBytes, KeySizeBits);
-        amOFC:
-          AES := TAesOfc.Create(KeyBytes, KeySizeBits);
-        amCTC:
-          AES := TAesCtc.Create(KeyBytes, KeySizeBits);
-      else
-        AES := TAesEcb.Create(KeyBytes, KeySizeBits);
-      end;
-
-      try
-        // Encrypt with IV
-        EncryptedData := AES.EncryptPkcs7(DataStr, True);
-
-        // Create header with magic number and encryption info
-        FillChar(Header, SizeOf(Header), 0);
-        PCardinal(@Header[0])^ := ENCRYPTION_MAGIC;
-        PCardinal(@Header[4])^ := Cardinal(fEncryptionMode);
-        PCardinal(@Header[8])^ := Cardinal(fEncryptionKeySize);
-        // bytes 12-15 are reserved (already zeroed)
-
-        // Combine header + encrypted data
-        SetLength(FinalResult, ENCRYPTION_HEADER_SIZE + Length(EncryptedData));
-        Move(Header[0], FinalResult[0], ENCRYPTION_HEADER_SIZE);
-        if Length(EncryptedData) > 0 then
-          Move(EncryptedData[1], FinalResult[ENCRYPTION_HEADER_SIZE],
-            Length(EncryptedData));
-
-        Result := FinalResult;
-
-      finally
-        AES.Free;
-      end;
-    except
-      on E: Exception do
-      begin
-        DoError('Server encryption failed: ' + E.Message);
-        Result := Data; // Return original data if encryption fails
-      end;
-    end;
-
-    // Clear sensitive key material
-    FillChar(KeyBytes, SizeOf(KeyBytes), 0);
-  except
-    on E: Exception do
-    begin
-      DoError('Server encryption parsing failed: ' + E.Message);
-      Result := Data; // Return original data on error
-    end;
+    if not fKeyDerived then Exit;
+    DKey  := fDerivedKey;
+    Mode  := fEncryptionMode;
+    KSize := fEncryptionKeySize;
+  finally
+    fCryptoLock.Leave;
   end;
+  case KSize of
+    aks128: KSBits := 128;
+    aks192: KSBits := 192;
+    aks256: KSBits := 256;
+  else      KSBits := 256;
+  end;
+  SetLength(DataStr, Length(Data));
+  if Length(Data) > 0 then
+    Move(Data[0], DataStr[1], Length(Data));
+  try
+    case Mode of
+      amECB: AES := TAesEcb.Create(DKey, KSBits);
+      amCBC: AES := TAesCbc.Create(DKey, KSBits);
+      amCFB: AES := TAesCfb.Create(DKey, KSBits);
+      amOFB: AES := TAesOfb.Create(DKey, KSBits);
+      amCTR: AES := TAesCtr.Create(DKey, KSBits);
+      amGCM: AES := TAesGcm.Create(DKey, KSBits);
+      amCFC: AES := TAesCfc.Create(DKey, KSBits);
+      amOFC: AES := TAesOfc.Create(DKey, KSBits);
+      amCTC: AES := TAesCtc.Create(DKey, KSBits);
+    else    AES := TAesCbc.Create(DKey, KSBits);
+    end;
+    try
+      EncStr := AES.EncryptPkcs7(DataStr, True);
+      FillChar(Header, SizeOf(Header), 0);
+      PCardinal(@Header[0])^ := ENCRYPTION_MAGIC;
+      PCardinal(@Header[4])^ := Cardinal(Mode);
+      PCardinal(@Header[8])^ := Cardinal(KSize);
+      SetLength(Final, ENCRYPTION_HEADER_SIZE + Length(EncStr));
+      Move(Header[0], Final[0], ENCRYPTION_HEADER_SIZE);
+      if Length(EncStr) > 0 then
+        Move(EncStr[1], Final[ENCRYPTION_HEADER_SIZE], Length(EncStr));
+      Result := Final;
+    finally
+      AES.Free;
+    end;
+  except
+    Result := Data;
+  end;
+  FillChar(DKey, SizeOf(DKey), 0);
 end;
 
 function TmORMot2WebSocketServer.DecryptData(const Data: TBytes;
   const ClientIP: string): TBytes;
 var
+  DKey:    THash256;
+  Header:  array[0..ENCRYPTION_HEADER_SIZE-1] of Byte;
+  Magic:   Cardinal;
+  Mode:    TAESMode;
+  KSize:   TAESKeySize;
+  KSBits:  Integer;
+  EncPart: RawByteString;
   DataStr: RawByteString;
-  Password: RawByteString;
-  KeyBytes: THash256;
-  AES: TAesAbstract;
-  KeySizeBits: Integer;
-  Salt: RawByteString;
-  Header: array [0 .. ENCRYPTION_HEADER_SIZE - 1] of Byte;
-  EncryptedPortion: RawByteString;
-  Magic: Cardinal;
-  Mode: TAESMode;
-  KeySize: TAESKeySize;
-  SaltHost: string;
+  AES:     TAesAbstract;
 begin
-  Result := Data; // Default to original data
-
-  if not fEncryptionEnabled or (fEncryptionKey = '') then
-    Exit;
-
-  // Check if data has encryption header
-  if Length(Data) < ENCRYPTION_HEADER_SIZE then
-    Exit;
-
+  Result := Data;
+  if not fEncryptionEnabled then Exit;
+  fCryptoLock.Enter;
   try
-    // Extract header
-    Move(Data[0], Header[0], ENCRYPTION_HEADER_SIZE);
-    Magic := PCardinal(@Header[0])^;
-
-    // Check magic number
-    if Magic <> ENCRYPTION_MAGIC then
-      Exit; // Not encrypted data, return as-is
-
-    // Extract encryption parameters from header
-    Mode := TAESMode(PCardinal(@Header[4])^);
-    KeySize := TAESKeySize(PCardinal(@Header[8])^);
-
-    // CRITICAL: VALIDATE RECEIVED PARAMETERS MATCH OURS
-    if (Mode <> fEncryptionMode) then
-    begin
-      DoError(Format('ENCRYPTION MODE MISMATCH: received %s, expected %s',
-        [GetEnumName(TypeInfo(TAESMode), Ord(Mode)),
-         GetEnumName(TypeInfo(TAESMode), Ord(fEncryptionMode))]));
-      Exit; // Don't try to decrypt with wrong mode!
-    end;
-
-    if (KeySize <> fEncryptionKeySize) then
-    begin
-      DoError(Format('KEY SIZE MISMATCH: received %s, expected %s',
-        [GetEnumName(TypeInfo(TAESKeySize), Ord(KeySize)),
-         GetEnumName(TypeInfo(TAESKeySize), Ord(fEncryptionKeySize))]));
-      Exit; // Don't try to decrypt with wrong key size!
-    end;
-
-    // Extract encrypted portion
-    SetLength(EncryptedPortion, Length(Data) - ENCRYPTION_HEADER_SIZE);
-    if Length(EncryptedPortion) > 0 then
-      Move(Data[ENCRYPTION_HEADER_SIZE], EncryptedPortion[1],
-        Length(EncryptedPortion));
-
-    // Determine key size bits
-    case KeySize of
-      aks128:
-        KeySizeBits := 128;
-      aks192:
-        KeySizeBits := 192;
-      aks256:
-        KeySizeBits := 256;
-    else
-      KeySizeBits := 256;
-    end;
-
-    // FIXED: Convert server's detected IP back to what client used
-    if ClientIP = '127.0.0.1' then
-      SaltHost := 'localhost'  // Client used 'localhost' to connect
-    else
-      SaltHost := ClientIP;    // For other IPs, use as-is
-
-    // FIXED: Use SAME salt derivation as client
-    Password := ToUtf8(fEncryptionKey);
-    Salt := ToUtf8(fEncryptionKey + '_hardcoded_salt_2024');
-    Pbkdf2HmacSha256(Password, Salt, 1000, KeyBytes);
-
-    try
-      // Create AES instance based on mode from header
-      case Mode of
-        amECB:
-          AES := TAesEcb.Create(KeyBytes, KeySizeBits);
-        amCBC:
-          AES := TAesCbc.Create(KeyBytes, KeySizeBits);
-        amCFB:
-          AES := TAesCfb.Create(KeyBytes, KeySizeBits);
-        amOFB:
-          AES := TAesOfb.Create(KeyBytes, KeySizeBits);
-        amCTR:
-          AES := TAesCtr.Create(KeyBytes, KeySizeBits);
-        amGCM:
-          AES := TAesGcm.Create(KeyBytes, KeySizeBits);
-        amCFC:
-          AES := TAesCfc.Create(KeyBytes, KeySizeBits);
-        amOFC:
-          AES := TAesOfc.Create(KeyBytes, KeySizeBits);
-        amCTC:
-          AES := TAesCtc.Create(KeyBytes, KeySizeBits);
-      else
-        AES := TAesEcb.Create(KeyBytes, KeySizeBits);
-      end;
-
-      try
-        // Decrypt with IV
-        DataStr := AES.DecryptPkcs7(EncryptedPortion, True);
-
-        // Convert back to TBytes
-        SetLength(Result, Length(DataStr));
-        if Length(DataStr) > 0 then
-          Move(DataStr[1], Result[0], Length(DataStr));
-
-      finally
-        AES.Free;
-      end;
-    except
-      on E: Exception do
-      begin
-        DoError('Server decryption failed: ' + E.Message);
-        Result := Data; // Return original data if decryption fails
-      end;
-    end;
+    if not fKeyDerived then Exit;
+    DKey := fDerivedKey;
   finally
-    // Clear sensitive key material
-    FillChar(KeyBytes, SizeOf(KeyBytes), 0);
+    fCryptoLock.Leave;
   end;
+  if Length(Data) < ENCRYPTION_HEADER_SIZE then Exit;
+  Move(Data[0], Header[0], ENCRYPTION_HEADER_SIZE);
+  Magic := PCardinal(@Header[0])^;
+  if Magic <> ENCRYPTION_MAGIC then Exit;
+  Mode  := TAESMode(PCardinal(@Header[4])^);
+  KSize := TAESKeySize(PCardinal(@Header[8])^);
+  SetLength(EncPart, Length(Data) - ENCRYPTION_HEADER_SIZE);
+  if Length(EncPart) > 0 then
+    Move(Data[ENCRYPTION_HEADER_SIZE], EncPart[1], Length(EncPart));
+  case KSize of
+    aks128: KSBits := 128;
+    aks192: KSBits := 192;
+    aks256: KSBits := 256;
+  else      KSBits := 256;
+  end;
+  try
+    case Mode of
+      amECB: AES := TAesEcb.Create(DKey, KSBits);
+      amCBC: AES := TAesCbc.Create(DKey, KSBits);
+      amCFB: AES := TAesCfb.Create(DKey, KSBits);
+      amOFB: AES := TAesOfb.Create(DKey, KSBits);
+      amCTR: AES := TAesCtr.Create(DKey, KSBits);
+      amGCM: AES := TAesGcm.Create(DKey, KSBits);
+      amCFC: AES := TAesCfc.Create(DKey, KSBits);
+      amOFC: AES := TAesOfc.Create(DKey, KSBits);
+      amCTC: AES := TAesCtc.Create(DKey, KSBits);
+    else    AES := TAesCbc.Create(DKey, KSBits);
+    end;
+    try
+      DataStr := AES.DecryptPkcs7(EncPart, True);
+      SetLength(Result, Length(DataStr));
+      if Length(DataStr) > 0 then
+        Move(DataStr[1], Result[0], Length(DataStr));
+    finally
+      AES.Free;
+    end;
+  except
+    Result := Data;
+  end;
+  FillChar(DKey, SizeOf(DKey), 0);
 end;
 
 // =============================================================================
@@ -1269,7 +1158,6 @@ end;
 
 procedure TmORMot2WebSocketServer.InternalStart;
 var
-  EncryptionKey: RawUtf8;
   Protocol: TCustomWebSocketServerProtocol;
 begin
   if fActive then
@@ -1298,17 +1186,17 @@ begin
       fClientLock.Leave;
     end;
 
-    // Prepare encryption key
-    if fEncryptionEnabled and (fEncryptionKey <> '') then
-      EncryptionKey := ToUtf8(fEncryptionKey)
-    else
-      EncryptionKey := '';
-
-    // Create the ASYNC server using proper mORMot2 approach
+    { Pass empty URI/key so the parent constructor does NOT auto-register a
+      TWebSocketProtocolJson named 'Json'. If we let it register one and then
+      call WebSocketProtocols.AddOnce(Protocol), AddOnce finds 'Json' already
+      present and silently frees our custom protocol without adding it.
+      Result: the built-in protocol handles all connections and our
+      ProcessIncomingFrame override never fires — server receives nothing.
+      With empty URI, we are the sole 'Json' protocol; AddOnce adds us;
+      empty URI acts as a catch-all and matches any client connection path. }
     fServer := TCustomAsyncServerRest.Create(ToUtf8(IntToStr(fPort)), nil, nil,
-      // OnStart, OnStop
       ToUtf8('mORMot2WebSocketServer'), fServerThreadPoolCount,
-      ToUtf8(fWebSocketsURI), EncryptionKey, fWebSocketsAjax, []);
+      '', '', fWebSocketsAjax, []);
 
     fServer.OwnerComponent := Self;
 
@@ -1472,8 +1360,7 @@ begin
   try
     dataToSend := Command;
 
-    // FIXED: Auto-encrypt with proper coordination header
-    if fEncryptionEnabled and (fEncryptionKey <> '') then
+    if fEncryptionEnabled then
       dataToSend := EncryptData(Command, clientInfo.IP);
 
     Result := fServer.SendToClient(ClientID, dataToSend);
@@ -1515,8 +1402,7 @@ begin
         try
           dataToSend := Command;
 
-          // FIXED: Auto-encrypt with proper coordination header for each client
-          if fEncryptionEnabled and (fEncryptionKey <> '') then
+          if fEncryptionEnabled then
             dataToSend := EncryptData(Command, clientInfo.IP);
 
           if fServer.SendToClient(ClientID, dataToSend) then
@@ -1627,23 +1513,46 @@ end;
 
 procedure TmORMot2WebSocketServer.SetEncryptionEnabled(const Value: boolean);
 begin
-  fEncryptionEnabled := Value;
+  fCryptoLock.Enter;
+  try
+    fEncryptionEnabled := Value;
+    DeriveEncryptionKey;
+  finally
+    fCryptoLock.Leave;
+  end;
 end;
 
 procedure TmORMot2WebSocketServer.SetEncryptionKey(const Value: string);
 begin
-  fEncryptionKey := Value;
+  fCryptoLock.Enter;
+  try
+    fEncryptionKey := Value;
+    DeriveEncryptionKey;
+  finally
+    fCryptoLock.Leave;
+  end;
 end;
 
 procedure TmORMot2WebSocketServer.SetEncryptionMode(const Value: TAESMode);
 begin
-  fEncryptionMode := Value;
+  fCryptoLock.Enter;
+  try
+    fEncryptionMode := Value;
+    DeriveEncryptionKey;
+  finally
+    fCryptoLock.Leave;
+  end;
 end;
 
-procedure TmORMot2WebSocketServer.SetEncryptionKeySize
-  (const Value: TAESKeySize);
+procedure TmORMot2WebSocketServer.SetEncryptionKeySize(const Value: TAESKeySize);
 begin
-  fEncryptionKeySize := Value;
+  fCryptoLock.Enter;
+  try
+    fEncryptionKeySize := Value;
+    DeriveEncryptionKey;
+  finally
+    fCryptoLock.Leave;
+  end;
 end;
 
 // =============================================================================
